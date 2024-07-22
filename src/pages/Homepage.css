@@ -1,0 +1,134 @@
+#home .section {
+  text-align: center;
+  scroll-margin-top: 9.5rem;
+}
+
+#home .hero {
+  position: relative;
+  padding: 10rem 2rem;
+  text-align: center;
+  background-image: 
+    url(/public/backgrounds/bg-home/bg-1.webp), 
+    radial-gradient(circle at 60% bottom, 
+      var(--color-dark-1), 
+      var(--color-dark-2), 
+      var(--color-dark-3)
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 85vh;
+}
+
+#home .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 60% bottom, 
+    var(--color-dark-1), 
+    var(--color-dark-2), 
+    var(--color-dark-3)
+  );
+  opacity: 0.9;
+}
+
+#home .hero-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-light-1);
+  width: 80%;
+  z-index: 1;
+}
+
+#home .offer {
+  position: relative;
+  width: 100%;
+  height: 35rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+#home .offer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dark-3);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+#home .offer-cp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+#home .offer--1 {
+  clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%);
+  background-image: url(/public/home/auto-detailing-zewnetrzny.webp);
+}
+
+#home .offer--1 .offer-cp {
+  top: 45%;
+}
+
+#home .offer--2 {
+  margin-top: -8.5rem;
+  clip-path: polygon(0 26%, 100% 0, 100% 74%, 0% 100%);
+  background-image: url(/public/home/auto-detailing-wewnetrzny.webp);
+}
+
+.offer--2 .offer-cp {
+  top: 55%;
+}
+
+#home .offer--3 {
+  margin-top: -11.5rem;
+  clip-path: polygon(0 35%, 100% 9%, 100% 100%, 0% 100%);
+  background-image: url(/public/home/auto-detailing-silnik.webp);
+}
+
+#home .offer--3 .offer-cp {
+  top: 65%;
+}
+
+#home .about {
+  padding-top: 0;
+}
+
+#home .about-logo {
+  width: 12rem;
+}
+
+#home .gallery {
+  background-image: url(/public/backgrounds/bg-mobile.svg),
+    radial-gradient(circle at 60% bottom, 
+    var(--color-dark-3), 
+    var(--color-dark-2), 
+    var(--color-dark-3)
+  );
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#home .gallery-wrapper {
+  padding-bottom: 5rem;
+  font-size: 0;
+}

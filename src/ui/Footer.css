@@ -1,0 +1,11 @@
+.footer {
+  padding: 2rem;
+  background-color: var(--color-dark-3);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 3.5rem;
+  }
+}

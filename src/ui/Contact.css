@@ -1,0 +1,55 @@
+#contact {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+#contact .contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.5rem;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact .contact-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+#contact .contact-icon--pin svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+#contact .contact-icon--phone svg{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#contact .p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  #contact .contact-list {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    column-gap: 15rem;
+  }
+
+  #contact .contact-li {
+    align-items: flex-start;
+  }
+
+  #contact .p {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+}

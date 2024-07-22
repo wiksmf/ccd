@@ -1,0 +1,17 @@
+.socials {
+  position: fixed;
+  top: 50%;
+  right: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  list-style-type: none;
+  z-index: 1;
+}
+
+.social,
+.social-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: var(--border-radius);
+}

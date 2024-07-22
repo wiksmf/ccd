@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  z-index: 99;
+}
+
+header::before {
+  content: '';
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--backdrop-color);
+}
+
+.header-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}

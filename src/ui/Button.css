@@ -1,0 +1,13 @@
+.nav-btn svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav-btn--light {
+  color: var(--color-light-1);
+}
+
+.nav-btn--dark {
+  align-self: flex-end;
+  color: var(--color-dark-3)
+}

@@ -1,0 +1,37 @@
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 0.5rem;
+}
+
+.phone-a {
+  display: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  color: var(--color-light-1);
+  animation: moveInRightPhone 0.3s linear;
+}
+
+.phone--show .phone-a {
+  display: block;
+}
+
+.phone button svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-light-1);
+}
+
+@keyframes moveInRightPhone {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
