@@ -56,10 +56,34 @@
   padding-left: 0.8rem;
 }
 
-/* .nav-dropdown .nav-dropdown--list .nav-link {
-  padding-left: 1.7rem;
-  background-image: url('./../../public/icons/li-marker.svg');
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 0.95rem;
-} */
+@media screen and (min-width: 1200px) {
+  .nav-link {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--color-light-1)
+  }
+
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropdown--list {
+    position: absolute;
+    top: 5rem;
+    left: -100%;
+    width: 30rem;
+    background-color: var(--backdrop-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-dropdown .nav-dropdown--list .nav-link {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--color-light-1);
+  }
+
+  .nav-dropdown.nav-dropdown--show .nav-dropdown--list {
+    padding: 2rem 2.5rem;
+  }
+}

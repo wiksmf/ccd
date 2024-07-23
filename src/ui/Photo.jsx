@@ -4,10 +4,10 @@ function Photo({ index, src, alt }) {
   const i = index + 1;
 
   return (
-    <div className={`gallery-border gallery-border--${i}`}>
+    <div className={`photo-border photo-border--${i}`}>
       <img
         loading="lazy"
-        className={`gallery-img gallery-img--${i}`}
+        className={`photo-img photo-img--${i}`}
         src={src}
         alt={alt}
       />

@@ -13,3 +13,9 @@
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+
+@media screen and (min-width: 768px) {
+  .map-wrapper {
+    height: 40rem;
+  }
+}

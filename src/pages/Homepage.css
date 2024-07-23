@@ -5,7 +5,7 @@
 
 #home .hero {
   position: relative;
-  padding: 10rem 2rem;
+  padding: 18rem 2rem;
   text-align: center;
   background-image: 
     url(/public/backgrounds/bg-home/bg-1.webp), 
@@ -17,7 +17,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 85vh;
+  height: 90vh;
 }
 
 #home .hero::before {
@@ -41,7 +41,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-light-1);
-  width: 80%;
+  width: 90%;
   z-index: 1;
 }
 
@@ -131,4 +131,85 @@
 #home .gallery-wrapper {
   padding-bottom: 5rem;
   font-size: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #home .p-lr {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  #home .about-wrapper {
+    display: grid;
+    grid-template-areas: 
+      'l r'
+      'l r';
+    grid-template-columns: 1fr 25rem;
+    gap: 4rem 6rem;
+    max-width: 110rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: left;
+  }
+
+  #home .about-logo {
+    width: 100%;
+  }
+
+  #home .about .btn-cta {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #home .hero .btn-cta {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    max-width: 35rem;
+  }
+
+  #home .offer-wrapper {
+    position: relative;
+    height: 500px;
+  }
+
+  #home .offer {
+    position: absolute;
+    top: 0;
+    height: 500px;
+  }
+
+  #home .offer--1 {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
+    min-width: 35.2rem;
+    width: 32.5vw;
+    max-width: 50.2rem;
+  }
+
+  #home .offer--2 {
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
+    margin: 0;
+    min-width: 40rem;
+    width: 36.5vw;
+    max-width: 55.9rem;
+  }
+
+  #home .offer--3 {
+    right: 0;
+    clip-path: polygon(13.5% 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 0;
+    min-width: 35.2rem;
+    width: 32.5vw;
+    max-width: 50.2rem;
+  }
+
+  #home .offer--1 .offer-cp,
+  #home .offer--2 .offer-cp,
+  #home .offer--3 .offer-cp {
+    top: 50%;
+  }
 }

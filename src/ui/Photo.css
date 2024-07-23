@@ -1,5 +1,4 @@
-
-.gallery-border {
+.photo-border {
   position: relative;
   padding: 1rem;
   width: var(--img-s);
@@ -12,7 +11,7 @@
   transition: all 0.2s linear
 }
 
-.gallery-border.gallery-border--1 {
+.photo-border.photo-border--1 {
   align-self: flex-end;
   background-image: linear-gradient(120deg,
       var(--color-gold-5),
@@ -21,7 +20,7 @@
       var(--color-gold-5));
 }
 
-.gallery-border.gallery-border--2 {
+.photo-border.photo-border--2 {
   align-self: flex-start;
   background-image: linear-gradient(180deg,
     var(--color-gold-3),
@@ -30,7 +29,7 @@
     var(--color-gold-4));
 }
 
-.gallery-border.gallery-border--3 {
+.photo-border.photo-border--3 {
   align-self: flex-end;
   background-image: linear-gradient(150deg,
       var(--color-gold-1),
@@ -39,7 +38,7 @@
       var(--color-gold-2));
 }
 
-.gallery-img {
+.photo-img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,7 +49,7 @@
   object-fit: cover;
 }
 
-.gallery-border.gallery-border--4,
-.gallery-border.gallery-border--5 {
+.photo-border.photo-border--4,
+.photo-border.photo-border--5 {
   display: none;
 }

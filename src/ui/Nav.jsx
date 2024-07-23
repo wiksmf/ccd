@@ -11,7 +11,7 @@ import './Nav.css'
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
-  const isMobile = useMediaQuery({ maxWidth: '1365px' })
+  const isMobile = useMediaQuery({ maxWidth: '1199px' })
 
   function handleMenuBtnClick() {
     setIsMenuOpen(!isMenuOpen)
@@ -57,7 +57,7 @@ function Nav() {
           </div>
         </div>
       ) : (
-        <NavItems />
+        <NavItems showDropdown={showDropdown} onShowDropdown={handleShowDropdown} />
       )}
     </nav>
   )

@@ -19,14 +19,16 @@ function Contact() {
           <p className="p--md m-mtb txt--g">
             <strong>Masz pytania? Zadzwoń!</strong>
           </p>
+        </div>
 
-          <ul className="contact-list">
+        <div className="contact-wrapper">
+          <ul className="contact-list m-mb">
             <li className="contact-li">
               <span className='contact-icon contact-icon--pin'>
                 <HiOutlineMapPin />
               </span>
 
-              <p className="p--sm txt--b">
+              <p className="p p--sm txt--b">
                 <strong>Carbon Care Detailing</strong>
                 <span className="d-block">Ulica Jakas Tam 4</span>
                 <span className="d-block">00-000 Gdzies Tam</span>
@@ -43,12 +45,12 @@ function Contact() {
               </AnchorLink>
             </li>
           </ul>
-        </div>
 
-        <Map />
+          <Map />
+        </div>
       </div>
     </section>
   )
 }
 
-export default Contact
+export default Contact;

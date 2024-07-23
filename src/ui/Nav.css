@@ -58,3 +58,10 @@
 .nav-white.nav--show {
   transition-delay: 0.4s;
 }
+
+@media screen and (min-width: 1200px) {
+  .nav,
+  .nav-list {
+    column-gap: 4rem;
+  }
+}

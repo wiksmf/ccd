@@ -8,6 +8,7 @@
 .phone-a {
   display: none;
   font-size: 1.2rem;
+  line-height: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.03rem;
   color: var(--color-light-1);
@@ -22,6 +23,23 @@
   width: 2rem;
   height: 2rem;
   color: var(--color-light-1);
+}
+
+@media screen and (min-width: 1200px) {
+  .phone {
+    column-gap: 1.2rem;
+  }
+
+  .phone-a {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .phone button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 @keyframes moveInRightPhone {

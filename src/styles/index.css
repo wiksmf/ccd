@@ -21,7 +21,7 @@
   --backdrop-color: rgba(10, 10, 10, 0.95);
 
   /* Shadows */
-  --shadow-sm: 0 1.5px 5px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 0 7px rgba(0, 0, 0, 0.4);
 
   /* Border */
   --border-radius: 5px;
@@ -51,9 +51,9 @@ body {
   background-color: var(--color-light-1);
 }
 
-main {
+/* main {
   padding-top: 8rem;
-}
+} */
 
 button {
   font-family: inherit;
@@ -275,6 +275,11 @@ p.p--lg {
     --img-s: 23rem;
   }
 
+  /* RESET */
+  /* main {
+    padding-top: 8.5rem;
+  } */
+
   /* LAYOUT */
   .section {
     padding: 6rem 3.5em;
@@ -292,21 +297,21 @@ p.p--lg {
 
   /* MARGINS */
   .m-mtb {
-    margin: 4.5rem 0;
+    margin: 4rem 0;
   }
 
   .m-mt {
-    margin-top: 4.5rem;
+    margin-top: 4rem;
   }
 
   .m-mb {
-    margin-bottom: 4.5rem;
+    margin-bottom: 4rem;
   }
 
   .p-lr {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-}
+  }
 
   /* FONTS */
   h1 {
@@ -346,5 +351,51 @@ p.p--lg {
   .btn-cta {
     font-size: 2rem;
     line-height: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --img-s: 25rem;
+    --img-m: 1.5rem;
+  }
+
+  /* RESET */
+  /* main {
+    padding-top: 9rem;
+  } */
+
+  /* LAYOUT */
+  .section {
+    padding: 8rem 3.5em;
+  }
+
+  ul li.li-marker {
+    background-size: 1.3rem;
+    background-position: left top 4px;
+  }
+
+  /* MARGINS */
+  .m-mtb {
+    margin: 6rem 0;
+  }
+
+  .m-mt {
+    margin-top: 6rem;
+  }
+
+  .m-mb {
+    margin-bottom: 6rem;
+  }
+
+  /* FONTS */
+  h1 {
+    font-size: 9.5rem;
+    line-height: 10.5rem;
+  }
+
+  p.p--lg {
+    font-size: 4em;
+    line-height: 5rem;
   }
 }

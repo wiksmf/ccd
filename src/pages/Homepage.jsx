@@ -38,13 +38,11 @@ function Homepage() {
 
       <section className="section" id='offer'>
         <div className="mw-wrapper">
-          <h2 className="h-h2 d-grid txt--b">
+          <h2 className="h-h2 d-grid txt--b m-mb">
             <span className="d-grid--line"></span>
             <strong className="d-grid--txt">Oferta</strong>
             <span className="d-grid--line"></span>
           </h2>
-
-          <p className="p p-grid m-mtb txt--b">Sprawdź czym się zajmuje</p>
 
           <div className="offer-wrapper">
             <div className="offer offer--1">
@@ -101,29 +99,29 @@ function Homepage() {
             <span className="d-grid--line"></span>
           </h2>
 
-          <div className="about-wrapper m-mtb">
+          <div className="about-wrapper m-mt">
             <div className="about-txt">
               <p className="p--md m-mb txt--g"><strong>Gwarancja najwyższej jakości!</strong>
               </p>
 
-              <p className="p m-mtb p-lr txt--black">
+              <p className="p p-lr txt--black">
                 Detailingiem aut zajmuję się nie tylko z racji zawodu, ale przede wszystkim z pasji do detali i dążenia do perfekcji. Moim celem jest wydobycie z każdego samochodu jego pełnego potencjału i przywrócenie mu blasku niczym prosto z salonu.
               </p>
             </div>
 
             <img
-              className="about-logo"
+              className="about-logo m-mtb"
               src={CarbonCareLogo}
               alt="Carbon Care Detailing - Profesjonalny detailing samochodowy "
             />
 
+            <Link
+              to='/o-mnie'
+              className="btn-cta btn-cta--g"
+            >
+              <strong>Dowiedz się więcej</strong>
+            </Link>
           </div>
-          <Link
-            to='/o-mnie'
-            className="btn-cta btn-cta--g"
-          >
-            <strong>Dowiedz się więcej</strong>
-          </Link>
         </div>
       </section>
 

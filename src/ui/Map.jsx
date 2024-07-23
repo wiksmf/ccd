@@ -1,16 +1,15 @@
-import { MapContainer, Marker, TileLayer } from 'react-leaflet'
-import { Icon } from 'leaflet'
-
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { Icon } from 'leaflet';
 
 import './Map.css';
 
 function Map() {
-  const position = [50.2813, 19.5657]
+  const position = [50.2813, 19.5657];
 
   const legalIcon = new Icon({
     iconUrl: '/public/icons/pin.svg',
     iconSize: [40, 40],
-  })
+  });
 
   return (
     <div className='map-wrapper'>
@@ -25,4 +24,4 @@ function Map() {
   )
 }
 
-export default Map
+export default Map;
