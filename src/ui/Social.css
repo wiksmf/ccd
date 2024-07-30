@@ -15,3 +15,23 @@
   width: 3rem;
   border-radius: var(--border-radius);
 }
+
+@media screen and (min-width: 768px) {
+  .social,
+  .social-img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .socials {
+    right: 1rem;
+  }
+
+  .social,
+  .social-img {
+    height: 4rem;
+    width: 4rem;
+  }
+}

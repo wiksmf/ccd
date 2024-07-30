@@ -8,48 +8,70 @@
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   margin: var(--img-m);
   margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
-  transition: all 0.2s linear
 }
 
 .photo-border.photo-border--1 {
   align-self: flex-end;
   background-image: linear-gradient(120deg,
-      var(--color-gold-5),
-      var(--color-gold-2),
-      var(--color-gold-4),
-      var(--color-gold-5));
+    var(--color-gold-5),
+    var(--color-gold-2),
+    var(--color-gold-4),
+    var(--color-gold-5));
 }
 
 .photo-border.photo-border--2 {
   align-self: flex-start;
   background-image: linear-gradient(180deg,
-    var(--color-gold-3),
-    var(--color-gold-5),
     var(--color-gold-2),
-    var(--color-gold-4));
+    var(--color-gold-5),
+    var(--color-gold-4),
+    var(--color-gold-2));
 }
 
 .photo-border.photo-border--3 {
   align-self: flex-end;
   background-image: linear-gradient(150deg,
-      var(--color-gold-1),
-      var(--color-gold-6),
-      var(--color-gold-4),
-      var(--color-gold-2));
+    var(--color-gold-1),
+    var(--color-gold-4),
+    var(--color-gold-6),
+    var(--color-gold-1));
 }
 
 .photo-img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: calc(var(--img-s) - 10px);
   height: calc(var(--img-s) * 1.1);
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   object-fit: cover;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s linear;
+}
+
+.photo-border:hover .photo-img {
+  transform: translate(-50%, -50%) scale(0.99);
 }
 
 .photo-border.photo-border--4,
 .photo-border.photo-border--5 {
   display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .photo-border {
+    width: var(--img-s);
+    height: calc(var(--img-s) * 1.1547);
+  }
+}
+
+@media screen and (min-width: 1390px) {
+  .photo-border.photo-border--4 {
+    display: inline-block;
+    background-image: linear-gradient(200deg,
+      var(--color-gold-3),
+      var(--color-gold-1),
+      var(--color-gold-2),
+      var(--color-gold-5));
+  }
 }

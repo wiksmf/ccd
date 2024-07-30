@@ -10,7 +10,7 @@
   --color-gold-2: #dfbe6a;
   --color-gold-3: #b18f4a;
   --color-gold-4: #947136;
-  --color-gold-5: #030303;
+  --color-gold-5: #382b13;
   --color-gold-6: #271e0d;
   
 
@@ -210,19 +210,33 @@ p.p--lg {
 
 .txt--g {
   background-color:  var(--color-gold-2);
-  background-image: linear-gradient(45deg, 
-    var(--color-gold-6), 
-    var(--color-gold-3), 
-    var(--color-gold-4),
-    var(--color-gold-2), 
-    var(--color-gold-4), 
-    var(--color-gold-3) 
-   );
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.txt--g-1 {
+  background-image: linear-gradient(45deg, 
+    var(--color-gold-5), 
+    var(--color-gold-3), 
+    var(--color-gold-4),
+    var(--color-gold-2), 
+    var(--color-gold-4), 
+    var(--color-gold-3) 
+  );
+}
+
+.txt--g-2 {
+  background-image: linear-gradient(210deg, 
+    var(--color-gold-4), 
+    var(--color-gold-2), 
+    var(--color-gold-3),
+    var(--color-gold-1), 
+    var(--color-gold-3), 
+    var(--color-gold-4) 
+   );
 }
 
 /* CTA */
@@ -239,12 +253,12 @@ p.p--lg {
   border-radius: var(--border-radius);
   border: 0.2rem solid var(--color-gold-2);
   background-image: linear-gradient(270deg, 
-    var(--color-gold-2),
     var(--color-gold-3),
+    var(--color-gold-4),
     var(--color-opacity-1),
     var(--color-opacity-1)
   );
-  background-position: 1% 50%;
+  background-position: 0 50%;
   background-size: 300% 300%;
   text-align: center;
   transition: 
@@ -332,12 +346,10 @@ p.p--lg {
   p {
     font-size: 2rem;
     line-height: 3.5rem;
-    letter-spacing: -0.05rem;
   }
 
   p.p--md {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.7rem;
     line-height: 4rem;
     letter-spacing: 0.1rem;
   }
@@ -356,7 +368,7 @@ p.p--lg {
 
 @media screen and (min-width: 1200px) {
   :root {
-    --img-s: 25rem;
+    --img-s: 30rem;
     --img-m: 1.5rem;
   }
 
@@ -367,12 +379,12 @@ p.p--lg {
 
   /* LAYOUT */
   .section {
-    padding: 8rem 3.5em;
+    padding: 9rem 3.5em;
   }
 
   ul li.li-marker {
     background-size: 1.3rem;
-    background-position: left top 4px;
+    background-position: left top 3px;
   }
 
   /* MARGINS */

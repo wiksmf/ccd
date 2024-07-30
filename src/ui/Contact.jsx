@@ -10,13 +10,13 @@ function Contact() {
       <div className="mw-wrapper">
 
         <div className="section">
-          <h2 className="h-h2 d-grid txt--b">
+          <h2 className="h-h2 d-grid txt--w">
             <span className="d-grid--line"></span>
             <strong className="d-grid--txt">Kontakt</strong>
             <span className="d-grid--line"></span>
           </h2>
 
-          <p className="p--md m-mtb txt--g">
+          <p className="p--md m-mtb txt--g txt--g-1">
             <strong>Masz pytania? Zadzwoń!</strong>
           </p>
         </div>

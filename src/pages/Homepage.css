@@ -5,19 +5,8 @@
 
 #home .hero {
   position: relative;
-  padding: 18rem 2rem;
   text-align: center;
-  background-image: 
-    url(/public/backgrounds/bg-home/bg-1.webp), 
-    radial-gradient(circle at 60% bottom, 
-      var(--color-dark-1), 
-      var(--color-dark-2), 
-      var(--color-dark-3)
-    );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 90vh;
+  height: 99vh;
 }
 
 #home .hero::before {
@@ -37,7 +26,7 @@
 
 #home .hero-wrapper {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 9.2rem);
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-light-1);
@@ -51,8 +40,17 @@
   height: 35rem;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 130%;
   text-align: center;
+  transition: background-size 0.15s linear;
+}
+
+#home .offer--2 {
+  height: 40rem;
+}
+
+#home .offer:hover {
+  background-size: 150%;
 }
 
 #home .offer::after {
@@ -90,7 +88,7 @@
 
 #home .offer--2 {
   margin-top: -8.5rem;
-  clip-path: polygon(0 26%, 100% 0, 100% 74%, 0% 100%);
+  clip-path: polygon(0 23%, 100% 0, 100% 77%, 0% 100%);
   background-image: url(/public/home/auto-detailing-wewnetrzny.webp);
 }
 
@@ -109,28 +107,76 @@
 }
 
 #home .about {
-  padding-top: 0;
-}
-
-#home .about-logo {
-  width: 12rem;
-}
-
-#home .gallery {
-  background-image: url(/public/backgrounds/bg-mobile.svg),
+  position: relative;
+  background-image: 
+    url(/public/backgrounds/bg-home/bg-2.jpg), 
     radial-gradient(circle at 60% bottom, 
-    var(--color-dark-3), 
+      var(--color-dark-1), 
+      var(--color-dark-2), 
+      var(--color-dark-3)
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#home .about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 60% bottom, 
+    var(--color-dark-1), 
     var(--color-dark-2), 
     var(--color-dark-3)
   );
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: auto;
+  opacity: 0.9;
+}
+
+#home .about .mw-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#home .about-img {
+  position: relative;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 5px 2px var(--color-gold-6);
+  overflow: visible;
+}
+
+#home .about-img::before {
+  content: '';
+  top: -10px;
+  right: -10px;
+  position: absolute;
+  height: calc(100% + 20px);
+  width: 100%;
+  background-image: linear-gradient(45deg, 
+    var(--color-gold-1), 
+    var(--color-gold-4), 
+    var(--color-gold-5), 
+    var(--color-gold-4), 
+    var(--color-gold-3), 
+    var(--color-gold-2));
+}
+
+#home .gallery {
+  position: relative;
+  z-index: 1;
 }
 
 #home .gallery-wrapper {
   padding-bottom: 5rem;
   font-size: 0;
+}
+
+#home .gallery .btn-cta {
+  color: var(--color-dark-3);
 }
 
 @media screen and (min-width: 768px) {
@@ -144,17 +190,44 @@
     grid-template-areas: 
       'l r'
       'l r';
-    grid-template-columns: 1fr 25rem;
-    gap: 4rem 6rem;
-    max-width: 110rem;
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 3rem;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     text-align: left;
   }
 
-  #home .about-logo {
+  #home .about-img {
+    grid-area: r;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #home .about-img {
+    position: relative;
+    width: 50%;
+  }
+
+  #home .about-img .container {
+    height: 100% !important;
+  }
+
+  #home .about-img::before {
+    content: '';
+    top: -25px;
+    right: -25px;
+    position: absolute;
+    height: calc(100% + 50px);
     width: 100%;
+    background-image: linear-gradient(45deg, 
+      var(--color-gold-5), 
+      var(--color-gold-3), 
+      var(--color-gold-4), 
+      var(--color-gold-2), 
+      var(--color-gold-4), 
+      var(--color-gold-3));
   }
 
   #home .about .btn-cta {

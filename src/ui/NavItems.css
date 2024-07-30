@@ -69,11 +69,11 @@
 
   .nav-dropdown .nav-dropdown--list {
     position: absolute;
-    top: 5rem;
+    top: 6.15rem;
     left: -100%;
     width: 30rem;
     background-color: var(--backdrop-color);
-    border-radius: var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     box-shadow: var(--shadow-sm);
   }
 

@@ -19,7 +19,7 @@ function NavItems({ showDropdown, onShowDropdown, onCloseMenu }) {
 
       <div className={`nav-dropdown  ${showDropdown ? 'nav-dropdown--show' : ''}`}>
         <Button className={'nav-link'} onClick={onShowDropdown}>
-          <span>Usługi</span>
+          <span>Oferta</span>
           <span className='nav-icon--arrow'>
             <HiOutlineChevronDown />
           </span>
