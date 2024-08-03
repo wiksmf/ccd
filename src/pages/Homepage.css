@@ -175,6 +175,11 @@
   font-size: 0;
 }
 
+/* #home .gallery .photo-border {
+  margin: var(--img-m);
+  margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
+} */
+
 #home .gallery .btn-cta {
   color: var(--color-dark-3);
 }

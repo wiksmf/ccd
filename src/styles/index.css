@@ -26,9 +26,9 @@
   /* Border */
   --border-radius: 5px;
 
-  --img-s: 20rem;
-  --img-m: 3rem;
-  --img-f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px);
+  --img-s: 10rem;
+  --img-m: 0.2rem;
+  --img-f: calc(1.732 * var(--img-s) + 4 * var(--img-m) - 1px);
 }
 
 /* RESET */
@@ -50,10 +50,6 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--color-light-1);
 }
-
-/* main {
-  padding-top: 8rem;
-} */
 
 button {
   font-family: inherit;
@@ -149,7 +145,8 @@ ul li.li-marker {
 h1,
 h2,
 h3,
-p {
+p,
+li {
   overflow-wrap: break-word;
   hyphens: auto;
 }
@@ -278,21 +275,19 @@ p.p--lg {
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 590px) {
+@media screen and (min-width: 425px) {
   :root {
-    --img-m: 1rem;
+    --img-s: 15rem;
+    --img-m: 0.2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   :root {
-    --img-s: 23rem;
+    /* --img-s: 23rem; */
+    --img-s: 20rem;
+    --img-m: 0.4rem;
   }
-
-  /* RESET */
-  /* main {
-    padding-top: 8.5rem;
-  } */
 
   /* LAYOUT */
   .section {
@@ -366,16 +361,19 @@ p.p--lg {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  :root {
+    /* --img-s: 23rem; */
+    --img-s: 25rem;
+    --img-m: 0.5rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   :root {
-    --img-s: 30rem;
-    --img-m: 1.5rem;
+    /* --img-s: 30rem;
+    --img-m: 1.5rem; */
   }
-
-  /* RESET */
-  /* main {
-    padding-top: 9rem;
-  } */
 
   /* LAYOUT */
   .section {
@@ -409,5 +407,13 @@ p.p--lg {
   p.p--lg {
     font-size: 4em;
     line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  :root {
+    /* --img-s: 23rem; */
+    --img-s: 28rem;
+    --img-m: 0.5rem;
   }
 }

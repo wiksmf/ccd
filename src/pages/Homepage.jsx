@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import ReactCompareImage from 'react-compare-image';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import ReactCompareImage from 'react-compare-image';
 
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
@@ -12,7 +12,6 @@ import img1 from '../../public/home/why-before.jpg';
 import img2 from '../../public/home/why-after.jpg';
 
 import './Homepage.css';
-
 
 function Homepage() {
   const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage2];
@@ -117,18 +116,11 @@ function Homepage() {
               <ReactCompareImage leftImage={img1} rightImage={img2} />
             </div>
 
-            {/* 
-            <img
-              className="about-logo m-mtb"
-              src={CarbonCareLogo}
-              alt="Carbon Care Detailing - Profesjonalny detailing samochodowy "
-            /> */}
-
             <Link
               to='/o-mnie'
               className="btn-cta btn-cta--g"
             >
-              <strong>Dowiedz się więcej</strong>
+              <strong>Poznajmy się</strong>
             </Link>
           </div>
         </div>
