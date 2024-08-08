@@ -6,22 +6,6 @@
 #home .hero {
   position: relative;
   text-align: center;
-  height: 99vh;
-}
-
-#home .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle at 60% bottom, 
-    var(--color-dark-1), 
-    var(--color-dark-2), 
-    var(--color-dark-3)
-  );
-  opacity: 0.9;
 }
 
 #home .hero-wrapper {
@@ -145,8 +129,22 @@
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 0 5px 2px var(--color-gold-6);
+  border-radius: var(--border-radius);
+  box-shadow: 1px 2px 4px -1px var(--color-gold-6);
   overflow: visible;
+}
+
+#home .about-img div[data-testid='container'] {
+  border-radius: var(--border-radius);
+  box-shadow: 1px 2px 4px -1px var(--color-gold-6);
+}
+
+#home .about-img img[data-testid='left-image'] {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#home .about-img img[data-testid='right-image'] {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
 #home .about-img::before {
@@ -156,6 +154,7 @@
   position: absolute;
   height: calc(100% + 20px);
   width: 100%;
+  border-radius: var(--border-radius);
   background-image: linear-gradient(45deg, 
     var(--color-gold-1), 
     var(--color-gold-4), 
@@ -167,6 +166,7 @@
 
 #home .gallery {
   position: relative;
+  text-align: left;
   z-index: 1;
 }
 
@@ -175,10 +175,10 @@
   font-size: 0;
 }
 
-/* #home .gallery .photo-border {
-  margin: var(--img-m);
-  margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
-} */
+#home .gallery .photo-wrapper {
+  margin-top: calc(var(--img-m) + var(--img-s)* 0.3);
+  margin-bottom: calc(var(--img-m) + var(--img-s)* 0.5);
+}
 
 #home .gallery .btn-cta {
   color: var(--color-dark-3);
@@ -240,6 +240,13 @@
   }
 }
 
+@media screen and (min-width: 1100px) {
+  #home .gallery .photo-wrapper {
+    margin-top: calc(var(--img-m) + var(--img-s)* 0.15);
+    margin-bottom: calc(var(--img-m) + var(--img-s)* 0.3);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   #home .hero .btn-cta {
     font-size: 3rem;
@@ -289,5 +296,10 @@
   #home .offer--2 .offer-cp,
   #home .offer--3 .offer-cp {
     top: 50%;
+  }
+
+  #home .gallery .photo-wrapper {
+    margin-top: calc(var(--img-m) + var(--img-s)* 0.2);
+    margin-bottom: calc(var(--img-m) + var(--img-s)* 0.4);
   }
 }

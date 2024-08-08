@@ -1,0 +1,65 @@
+.photo {
+  position: relative;
+  padding: 1rem;
+  width: var(--img-s);
+  height: calc(var(--img-s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  margin: var(--img-m);
+  margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
+}
+
+.photo:nth-child(odd) {
+  background-image: linear-gradient(120deg,
+    var(--color-gold-5),
+    var(--color-gold-2),
+    var(--color-gold-4),
+    var(--color-gold-5));
+}
+
+.photo:nth-child(even) {
+  background-image: linear-gradient(180deg,
+    var(--color-gold-2),
+    var(--color-gold-5),
+    var(--color-gold-4),
+    var(--color-gold-2));
+}
+
+.photo-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--img-s) - 5px);
+  height: calc(var(--img-s) * 1.1);
+  object-fit: cover;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s linear;
+}
+
+.photo.photo--4 {
+  display: inline-block;
+  background-image: linear-gradient(200deg,
+    var(--color-gold-3),
+    var(--color-gold-1),
+    var(--color-gold-2),
+    var(--color-gold-5));
+}
+
+.photo:hover .photo-img {
+  transform: translate(-50%, -50%) scale(0.99);
+}
+
+@media screen and (min-width: 768px) {
+  .photo-img {
+    width: calc(var(--img-s) - 10px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photo {
+    width: var(--img-s);
+    height: calc(var(--img-s) * 1.1547);
+  }
+}

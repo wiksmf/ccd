@@ -1,79 +1,37 @@
-.photo-border {
-  position: relative;
-  padding: 1rem;
-  width: var(--img-s);
-  height: calc(var(--img-s) * 1.1547);
-  display: inline-block;
-  font-size: initial;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  margin: var(--img-m);
-  margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
+.photo-main {
+  display:flex;
 }
 
-.photo-border.photo-border--1 {
-  align-self: flex-end;
-  background-image: linear-gradient(120deg,
-    var(--color-gold-5),
-    var(--color-gold-2),
-    var(--color-gold-4),
-    var(--color-gold-5));
+.photo-wrapper {
+  font-size: 0; 
+  margin-bottom: calc(var(--img-m) + var(--img-s)* 0.2885);
+  padding-left: calc(var(--img-m) + var(--img-s) * 0.15);
 }
 
-.photo-border.photo-border--2 {
-  align-self: flex-start;
-  background-image: linear-gradient(180deg,
-    var(--color-gold-2),
-    var(--color-gold-5),
-    var(--color-gold-4),
-    var(--color-gold-2));
+.photo-wrapper::before {
+  content: "";
+  width: calc(var(--img-s)/2 + var(--img-m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--img-f) - 3px),
+    #000  0 var(--img-f));
 }
 
-.photo-border.photo-border--3 {
-  align-self: flex-end;
-  background-image: linear-gradient(150deg,
-    var(--color-gold-1),
-    var(--color-gold-4),
-    var(--color-gold-6),
-    var(--color-gold-1));
-}
-
-.photo-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(var(--img-s) - 5px);
-  height: calc(var(--img-s) * 1.1);
-  object-fit: cover;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s linear;
-}
-
-.photo-border.photo-border--4 {
-  display: inline-block;
-  background-image: linear-gradient(200deg,
-    var(--color-gold-3),
-    var(--color-gold-1),
-    var(--color-gold-2),
-    var(--color-gold-5));
-}
-
-.photo-border:hover .photo-img {
-  transform: translate(-50%, -50%) scale(0.99);
-}
-
-@media screen and (min-width: 1200px) {
-  .photo-border {
-    width: var(--img-s);
-    height: calc(var(--img-s) * 1.1547);
+@media screen and (min-width: 425px) and (max-width: 456px) {
+  .photo-wrapper {
+    padding-left: 0;
   }
 }
 
-@media screen and (min-width: 1370px) {
-  .photo-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(var(--img-s) - 10px);
+@media screen and (min-width: 768px) {
+  .photo-wrapper {
+    padding-left: calc(var(--img-m) + var(--img-s) * 0.2885);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photo-wrapper {
+    padding-left: calc(var(--img-m) + var(--img-s) * 0.4);
   }
 }

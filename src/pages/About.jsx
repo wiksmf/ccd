@@ -8,21 +8,19 @@ import './About.css';
 import AboutImg from '../../public/about/4807_0.jpg'
 import galleryImage1 from '../../public/about/products/4370_0.jpg';
 import galleryImage2 from '../../public/about/products/4419_0.jpg';
-import galleryImage3 from '../../public/about/products/4442_0.jpg';
-import galleryImage4 from '../../public/about/products/4666_0.jpg';
+import galleryImage3 from '../../public/about/products/4666_0.jpg';
+import galleryImage4 from '../../public/about/products/4442_0.jpg';
 import galleryImage5 from '../../public/about/products/4690_0.jpg';
 import galleryImage6 from '../../public/about/products/4797_0.jpg';
 import galleryImage7 from '../../public/about/products/4805_0.jpg';
 
 
 function About() {
-  // const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7];
-  const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4];
-  const galleryImages2 = [galleryImage5, galleryImage6, galleryImage7];
+  const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7];
 
   return (
     <main id="about">
-      <section className="section hero">
+      <section className="section hero hero--sm">
         <div className="mw-wrapper">
           <div className="hero-wrapper">
             <h1 className="txt--g txt--g-2">
@@ -60,7 +58,7 @@ function About() {
               </div>
 
               <h2 className="txt--b m-mtb txt--g txt--g-2">
-                <strong> Dlaczego warto wybrać Carbon Care Detailing?</strong>
+                <strong>Dlaczego warto wybrać Carbon Care Detailing?</strong>
               </h2>
 
               <ul className='ul-flex'>
@@ -97,17 +95,13 @@ function About() {
       <section className="section products">
         <div className="mw-wrapper">
           <h2 className="txt--b m-mb txt--g txt--g-2">
-            <strong>Od jakości produktów zależy jakość efektu końcowego. <br />Dlatego stawiam na produkty najlepszej jakości.</strong>
+            <strong>
+              Od jakości produktów zależy jakość efektu końcowego. <br />
+              Dlatego stawiam na produkty najlepszej jakości!
+            </strong>
           </h2>
 
-          <div className='tm'>
-            <div className="products-main">
-              <div className="products-wrapper">
-                {galleryImages.map((img, index) => <Photo key={index} index={index} src={img} />)}
-                {galleryImages2.map((img, index) => <Photo key={index} index={index} src={img} />)}
-              </div>
-            </div>
-          </div>
+          <Photo images={galleryImages} />
         </div>
       </section>
     </main>

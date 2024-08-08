@@ -1,35 +1,5 @@
 #about .hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-align: center;
   background-image: url(../../public/backgrounds/bg-about/bg-1.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-}
-
-#about .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 60% bottom, 
-    var(--color-dark-1), 
-    var(--color-dark-2), 
-    var(--color-dark-3)
-  );
-  opacity: 0.9;
-}
-
-#about .hero .hero-wrapper,
-#about .content {
-  position: relative;
-  z-index: 1;
 }
 
 #about .about-flex {
@@ -69,7 +39,8 @@
 
 #about .about-img--img {
   position: relative;
-  box-shadow: 0 0 5px 2px var(--color-gold-6);
+  border-radius: var(--border-radius);
+  box-shadow: 1px 2px 4px -1px var(--color-gold-6);
   z-index: 1;
 }
 
@@ -80,6 +51,7 @@
   left: -20px;
   height: calc(100% + 40px);
   width: 100%;
+  border-radius: var(--border-radius);
   background-image: linear-gradient(45deg, 
     var(--color-gold-1), 
     var(--color-gold-4), 
@@ -90,44 +62,37 @@
 }
 
 #about .products {
-  background-image: radial-gradient(circle at 60% bottom, 
+  position: relative;
+  background-image: url(../../public/backgrounds/bg-about/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-image: radial-gradient(circle at 60% bottom, 
+    var(--color-dark-1), 
+    var(--color-dark-2), 
+    var(--color-dark-3)
+  ); */
+}
+
+#about .products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 60% bottom, 
     var(--color-dark-1), 
     var(--color-dark-2), 
     var(--color-dark-3)
   );
+  opacity: 0.9;
 }
 
-.tm {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.products-main {
-  display:flex;
-}
-
-.products-wrapper {
-  font-size: 0; /*disable white space between inline block element */
-}
-
-.products-wrapper::before {
-  content: "";
-  width: calc(var(--img-s)/2 + var(--img-m));
-  float: left;
-  height: 120%;
-  shape-outside: repeating-linear-gradient(
-    #0000 0 calc(var(--img-f) - 3px),
-    #000  0 var(--img-f));
-}
-
-.products-wrapper div {
-  width: var(--img-s);
-  margin: var(--img-m);
-  height: calc(var(--img-s)*1.1547); 
-  display: inline-block;
-  font-size:initial;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  margin-bottom: calc(var(--img-m) - var(--img-s)*0.2885); 
+#about .products h2 {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {

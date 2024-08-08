@@ -2,25 +2,26 @@ import { Link } from 'react-router-dom';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import ReactCompareImage from 'react-compare-image';
 
+import { useFirestore } from '../hooks/useFirestore';
+
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
-import galleryImage1 from '../../public/home/auto-detailing-zewnetrzny.webp';
-import galleryImage2 from '../../public/home/auto-detailing-wewnetrzny.webp';
-import galleryImage3 from '../../public/home/auto-detailing-silnik.webp';
 import img1 from '../../public/home/why-before.jpg';
 import img2 from '../../public/home/why-after.jpg';
 
 import './Homepage.css';
 
 function Homepage() {
-  const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage2];
+  const { items: galleryImages } = useFirestore('photos', 7)
+
+  console.log(galleryImages)
 
   return (
     <main id="home">
       <ParallaxBanner>
         <ParallaxBannerLayer image="public/backgrounds/bg-home/bg-1.jpg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
-        <section className="section hero">
+        <section className="section hero hero--lg">
           <div className="mw-wrapper">
             <div className="hero-wrapper">
               <h1 className="h-h1 txt--g txt--g-1">
@@ -136,9 +137,7 @@ function Homepage() {
               <span className="d-grid--line"></span>
             </h2>
 
-            <div className="gallery-wrapper m-mtb">
-              {galleryImages.map((img, index) => <Photo key={index} index={index} src={img} />)}
-            </div>
+            <Photo images={galleryImages} />
 
             <Link
               to='/galeria'

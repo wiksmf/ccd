@@ -1,16 +1,16 @@
+import PhotoItem from './PhotoItem';
+
 import './Photo.css'
 
-function Photo({ index, src, alt }) {
-  const i = index + 1;
+function Photo({ images }) {
+
+  console.log(images)
 
   return (
-    <div className={`photo-border photo-border--${i}`}>
-      <img
-        loading="lazy"
-        className={`photo-img photo-img--${i}`}
-        src={src}
-        alt={alt}
-      />
+    <div className="photo-main">
+      <div className="photo-wrapper">
+        {images.map(img => <PhotoItem key={img.id} src={img.url} />)}
+      </div>
     </div>
   )
 }
