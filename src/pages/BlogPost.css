@@ -1,3 +1,38 @@
-.post img {
-  width: 20rem;
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  border: 1px solid var(--color-gold-2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-light-1);
+  padding: 2rem 2.5rem;
+}
+
+.blog-post .blog-post--img {
+  align-self: center;
+  width: 100%;
+  height: 28.3rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.blog-post .blog-post--date {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0.01rem;
+  color: var(--color-dark-1);
+  text-transform: capitalize;
+}
+
+.blog-post .blog-post--title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.01rem;
+  color: var(--color-dark-1);
+  text-transform: unset;
 }

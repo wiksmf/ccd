@@ -24,7 +24,9 @@ function Blog() {
       <ParallaxBanner>
         <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className='section posts'>
-          {posts && posts.map(post => <BlogPost key={post.id} post={post} />)}
+          <div className="mw-wrapper">
+            {posts && posts.map(post => <BlogPost key={post.id} post={post} />)}
+          </div>
         </section>
       </ParallaxBanner>
     </main>

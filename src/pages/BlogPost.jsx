@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 import './BlogPost.css';
 
 function BlogPost({ post }) {
-
-  console.log(post)
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
 
   return (
-    <Link className="post" to={`/blog/${post.id}`}>
-      <img key={post.id} src={post.url} />
-      <span>{new Intl.DateTimeFormat('pl-PL', { dateStyle: 'full' }).format(post.createdAt)}</span>
-      <h2>{post.title}</h2>
+    <Link className="blog-post" to={`/blog/${post.id}`}>
+      <img className="blog-post--img" key={post.id} src={post.src} />
+      <span className="blog-post--date" >{post.createdAt.toDate().toLocaleDateString('pl-PL', options)}</span>
+      <h2 className="blog-post--title">{post.title}</h2>
     </Link>
   )
 }

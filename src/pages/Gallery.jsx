@@ -1,17 +1,28 @@
+import { useState } from 'react';
 // import { useState, useEffect } from 'react';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 
+import Lightbox from "yet-another-react-lightbox";
+import { Thumbnails } from 'yet-another-react-lightbox/plugins';
+
+import { useFirestore } from '../hooks/useFirestore';
+
+
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import 'react-tabs/style/react-tabs.css';
 import './Gallery.css'
-import { useFirestore } from '../hooks/useFirestore';
 
 function Gallery() {
   const { items: photos } = useFirestore('photos')
   const { items: videos } = useFirestore('videos')
 
-  console.log(videos)
+  // const [open, setOpen] = useState(false);
+
+  const [index, setIndex] = useState(-1);
+
+  console.log(photos)
 
   return (
     <main id="gallery">
@@ -36,11 +47,30 @@ function Gallery() {
               </TabList>
 
               <TabPanel>
-                {photos && photos.map(photo => <img key={photo.id} src={photo.url} />)}
+
+                {photos && photos.map((photo, currIndex) => <img
+                  key={photo.id}
+                  src={photo.src}
+                  onClick={() => setIndex(currIndex)}
+                />)}
+
+                <Lightbox
+                  plugins={[Thumbnails]}
+                  index={index}
+                  slides={photos}
+                  open={index >= 0}
+                  close={() => setIndex(-1)}
+                />
               </TabPanel>
 
               <TabPanel>
-                {videos && videos.map(video => <video key={video.id} src={`${video.url}`} controls width="320" height="240"></video>)}
+                {videos && videos.map(video => <video
+                  key={video.id}
+                  src={`${video.src}`}
+                  width="320"
+                  height="240"
+                  controls
+                ></video>)}
               </TabPanel>
             </Tabs>
           </div>

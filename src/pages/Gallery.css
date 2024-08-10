@@ -1,7 +1,12 @@
+#gallery {
+  position: relative;
+  z-index: 5;
+}
+
+
 #gallery img {
   width: 20rem;
 }
-
 
 
 .react-tabs__tab-list {

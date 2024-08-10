@@ -74,6 +74,7 @@ ul {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
 }
 
@@ -83,7 +84,7 @@ img {
   margin: 0 auto;
 }
 
-.section {
+.section:not(.hero) {
   padding: 4rem 2em;
 }
 
@@ -118,7 +119,6 @@ ul li.li-marker {
 .hero {
   position: relative;
   display: flex;
-  align-items: center;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,11 +126,14 @@ ul li.li-marker {
 }
 
 .hero.hero--sm {
-  height: 50vh;
+  height: 25vh;
+  align-items: flex-end;
+  padding-bottom: 3rem;
 }
 
 .hero.hero--lg {
   height: 99vh;
+  align-items: center;
 }
 
 .hero::before {
@@ -331,8 +334,12 @@ p.p--lg {
   }
 
   /* LAYOUT */
-  .section {
+  .section:not(.hero) {
     padding: 6rem 3.5em;
+  }
+
+  .hero.hero--sm {
+    height: 28vh;
   }
 
   .d-grid--txt {
@@ -425,8 +432,12 @@ p.p--lg {
   }
 
   /* LAYOUT */
-  .section {
+  .section:not(.hero) {
     padding: 9rem 3.5em;
+  }
+
+  .hero.hero--sm {
+    height: 31vh;
   }
 
   ul li.li-marker {

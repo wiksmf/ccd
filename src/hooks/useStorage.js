@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { storage, db } from '../firebase/config';
 
 import { v4 as uuidv4 } from 'uuid'
@@ -37,21 +37,20 @@ const useStorage = () => {
         setProgress(0)
 
         if (postTitle && postContent) {
-          const postId = uuidv4();
-          // Add a new document with a generated id.
+          const postId = postTitle.replaceAll(' ', '-');
+
           await addDoc(collection(db, 'posts'), {
             id: postId,
             title: postTitle,
             content: postContent,
-            url: downloadURL,
-            createdAt: new Date()
+            src: downloadURL,
+            createdAt: serverTimestamp()
           });
         } else {
-          // Add a new document with a generated id.
           await addDoc(collection(db, dbFolder), {
             id: fileId,
-            url: downloadURL,
-            createdAt: new Date(),
+            src: downloadURL,
+            createdAt: serverTimestamp(),
           });
         }
 

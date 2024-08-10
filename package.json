@@ -21,7 +21,8 @@
     "react-router-dom": "^6.23.1",
     "react-scroll-parallax": "^3.4.5",
     "react-tabs": "^6.0.2",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "yet-another-react-lightbox": "^3.21.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

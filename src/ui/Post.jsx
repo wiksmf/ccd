@@ -1,25 +1,38 @@
-import { useParams } from 'react-router-dom';
-
+import { useNavigate, useParams } from 'react-router-dom';
 import { useFirestoreCollection } from '../hooks/useFirestoreCollection';
 
-import './Post.css'
+import Button from './Button';
+
+import './Post.css';
 
 function Post() {
   const id = useParams();
-
-  console.log(id)
+  const navigate = useNavigate();
   const { post } = useFirestoreCollection('posts', id);
 
-  console.log('Post data:', post);
-
-
   return (
-    <div>
-      <h2>{post.title}</h2>
-      <span>{new Intl.DateTimeFormat('pl-PL', { dateStyle: 'full' }).format(post.createdAt)}</span>
-      <img key={post.id} src={post.url} />
-      <p>{post.content}</p>
-    </div>
+    <main id="post">
+      <section className="section hero hero--sm">
+        <div className="mw-wrapper">
+          <div className="hero-wrapper">
+            <h1 className="txt--g txt--g-2">
+              <strong>Blog</strong>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <Button onClick={(e) => { e.preventDefault(); navigate(-1); }}>
+        Back
+      </Button>
+
+      <div>
+        <h2>{post.title}</h2>
+        <span>{new Intl.DateTimeFormat('pl-PL', { dateStyle: 'full' }).format(post.createdAt)}</span>
+        <img key={post.id} src={post.src} />
+        <p>{post.content}</p>
+      </div>
+    </main>
   )
 }
 
