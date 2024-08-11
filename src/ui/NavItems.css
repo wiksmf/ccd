@@ -8,10 +8,15 @@
 }
 
 .nav-link {
+  position: relative;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.8rem;
   color: var(--color-dark-3)
+}
+
+.nav-link.active {
+  border-bottom: 1px solid var(--color-gold-2)
 }
 
 .nav-dropdown {

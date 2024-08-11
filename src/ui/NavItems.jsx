@@ -1,14 +1,20 @@
 import { NavLink } from 'react-router-dom'
 import { HiOutlineChevronDown } from 'react-icons/hi2'
 
+import { useMediaQuery } from "react-responsive"
+import { useOutsideClick } from '../hooks/useOutsideClick'
+
 import AnchorLink from './AnchorLink'
 import Button from './Button'
 
 import './NavItems.css'
 
-function NavItems({ showDropdown, onShowDropdown, onCloseMenu }) {
+function NavItems({ showDropdown, onShowDropdown, onCloseDropdown, onCloseMenu }) {
+  const isMobile = useMediaQuery({ maxWidth: '1199px' })
+  const ref = useOutsideClick(onCloseDropdown);
+
   return (
-    <ul className='nav-list'>
+    <ul className='nav-list' >
       <li className='nav-item'>
         <NavLink to='/' className={'nav-link'} onClick={onCloseMenu}>Strona główna</NavLink>
       </li>
@@ -25,17 +31,18 @@ function NavItems({ showDropdown, onShowDropdown, onCloseMenu }) {
           </span>
         </Button>
 
-        <ul className='nav-dropdown--list'>
+
+        <ul className='nav-dropdown--list' ref={isMobile ? null : ref}>
           <li className='nav-item li-marker'>
-            <NavLink to='/detailing-zewnetrzny' className={'nav-link'} onClick={onCloseMenu}>Detailing zewnetrzny</NavLink>
+            <NavLink to='/detailing-zewnetrzny' className={'nav-link'} onClick={isMobile ? onCloseMenu : onCloseDropdown}>Detailing zewnetrzny</NavLink>
           </li>
 
           <li className='nav-item li-marker'>
-            <NavLink to='/detailing-wewnetrzny' className={'nav-link'} onClick={onCloseMenu}>Detailing wewnętrzny</NavLink>
+            <NavLink to='/detailing-wewnetrzny' className={'nav-link'} onClick={isMobile ? onCloseMenu : onCloseDropdown}>Detailing wewnętrzny</NavLink>
           </li>
 
           <li className='nav-item li-marker'>
-            <NavLink to='/detailing-dodatkowe-uslugi' className={'nav-link'} onClick={onCloseMenu}>Usługi dodatkowe</NavLink>
+            <NavLink to='/detailing-dodatkowe-uslugi' className={'nav-link'} onClick={isMobile ? onCloseMenu : onCloseDropdown}>Usługi dodatkowe</NavLink>
           </li>
         </ul>
       </div>

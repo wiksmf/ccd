@@ -4,12 +4,10 @@ import './Photo.css'
 
 function Photo({ images }) {
 
-  console.log(images)
-
   return (
     <div className="photo-main">
       <div className="photo-wrapper">
-        {images.map(img => <PhotoItem key={img.id} src={img.url} />)}
+        {images.map(img => <PhotoItem key={img.id} src={img.src} />)}
       </div>
     </div>
   )

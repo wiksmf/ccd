@@ -1,22 +1,15 @@
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { useFirestore } from '../hooks/useFirestore';
 
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
+import AboutImg from '../../public/about/4807_0.jpg'
+
 import './About.css';
 
-import AboutImg from '../../public/about/4807_0.jpg'
-import galleryImage1 from '../../public/about/products/4370_0.jpg';
-import galleryImage2 from '../../public/about/products/4419_0.jpg';
-import galleryImage3 from '../../public/about/products/4666_0.jpg';
-import galleryImage4 from '../../public/about/products/4442_0.jpg';
-import galleryImage5 from '../../public/about/products/4690_0.jpg';
-import galleryImage6 from '../../public/about/products/4797_0.jpg';
-import galleryImage7 from '../../public/about/products/4805_0.jpg';
-
-
 function About() {
-  const galleryImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7];
+  const { items: galleryImages } = useFirestore('products')
 
   return (
     <main id="about">

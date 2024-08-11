@@ -348,7 +348,7 @@ p.p--lg {
 
   ul li.li-marker {
     background-size: 1.8rem;
-    background-position: left top 0.6rem;
+    background-position: left top -0.1rem;
     padding-left: 2.5rem;
   }
 

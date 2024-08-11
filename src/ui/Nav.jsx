@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useMediaQuery } from "react-responsive"
 import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2"
 
+import { useOutsideClick } from '../hooks/useOutsideClick'
+
 import Button from './Button'
 import Phone from './Phone'
 import NavItems from './NavItems'
@@ -12,18 +14,22 @@ function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
   const isMobile = useMediaQuery({ maxWidth: '1199px' })
+  const ref = useOutsideClick(handleCloseMenu);
 
   function handleMenuBtnClick() {
     setIsMenuOpen(!isMenuOpen)
     if (!isMenuOpen && isMobile) setShowDropdown(false)
   }
 
+  function handleCloseMenu() {
+    setIsMenuOpen(false)
+  }
   function handleShowDropdown() {
     setShowDropdown(!showDropdown)
   }
 
-  function handleCloseMenu() {
-    setIsMenuOpen(false)
+  function handleCloseDropdown() {
+    setShowDropdown(false)
   }
 
   return (
@@ -41,7 +47,7 @@ function Nav() {
       )}
 
       {isMobile ? (
-        <div className={`nav-mobile nav-black ${isMenuOpen ? 'nav--show' : ''}`}>
+        <div ref={ref} className={`nav-mobile nav-black ${isMenuOpen ? 'nav--show' : ''}`}>
           <div className={`nav-mobile nav-gold ${isMenuOpen ? 'nav--show' : ''}`}>
             <div className={`nav-mobile nav-white ${isMenuOpen ? 'nav--show' : ''}`}>
               <Button
@@ -57,7 +63,7 @@ function Nav() {
           </div>
         </div>
       ) : (
-        <NavItems showDropdown={showDropdown} onShowDropdown={handleShowDropdown} />
+        <NavItems showDropdown={showDropdown} onShowDropdown={handleShowDropdown} onCloseDropdown={handleCloseDropdown} />
       )}
     </nav>
   )

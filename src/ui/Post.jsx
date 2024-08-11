@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useFirestoreCollection } from '../hooks/useFirestoreCollection';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import parse from 'html-react-parser';
 
-import Button from './Button';
 
 import './Post.css';
 
@@ -9,6 +10,13 @@ function Post() {
   const id = useParams();
   const navigate = useNavigate();
   const { post } = useFirestoreCollection('posts', id);
+
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
 
   return (
     <main id="post">
@@ -22,16 +30,26 @@ function Post() {
         </div>
       </section>
 
-      <Button onClick={(e) => { e.preventDefault(); navigate(-1); }}>
-        Back
-      </Button>
+      <ParallaxBanner>
+        <ParallaxBannerLayer image="/public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <section className='section post'>
+          <div className="mw-wrapper">
+            <div className='post-back'>
+              <a onClick={(e) => { e.preventDefault(); navigate(-1); }}>
+                Blog
+              </a>
+              <span className='post-back--disabled'> / {post.title}</span>
+            </div>
 
-      <div>
-        <h2>{post.title}</h2>
-        <span>{new Intl.DateTimeFormat('pl-PL', { dateStyle: 'full' }).format(post.createdAt)}</span>
-        <img key={post.id} src={post.src} />
-        <p>{post.content}</p>
-      </div>
+
+            <h2 className='post-title'>{post.title}</h2>
+            <span className="post-date">{post.createdAt?.toDate().toLocaleDateString('pl-PL', options)}</span>
+            <img className="post-img" key={post.id} src={post.src} />
+            {parse(`<p className='post-content'>${post.content}</p>`)}
+          </div>
+        </section>
+      </ParallaxBanner>
+
     </main>
   )
 }

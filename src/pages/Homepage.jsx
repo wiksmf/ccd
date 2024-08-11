@@ -7,15 +7,13 @@ import { useFirestore } from '../hooks/useFirestore';
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
-import img1 from '../../public/home/why-before.jpg';
-import img2 from '../../public/home/why-after.jpg';
+import img1 from '../../public/home/rim-before.jpg';
+import img2 from '../../public/home/rim-after.jpg';
 
 import './Homepage.css';
 
 function Homepage() {
   const { items: galleryImages } = useFirestore('photos', 7)
-
-  console.log(galleryImages)
 
   return (
     <main id="home">

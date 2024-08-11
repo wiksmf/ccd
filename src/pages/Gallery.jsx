@@ -1,13 +1,9 @@
 import { useState } from 'react';
-// import { useState, useEffect } from 'react';
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-
-import Lightbox from "yet-another-react-lightbox";
 import { Thumbnails } from 'yet-another-react-lightbox/plugins';
+import Lightbox from "yet-another-react-lightbox";
 
 import { useFirestore } from '../hooks/useFirestore';
-
 
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -17,12 +13,7 @@ import './Gallery.css'
 function Gallery() {
   const { items: photos } = useFirestore('photos')
   const { items: videos } = useFirestore('videos')
-
-  // const [open, setOpen] = useState(false);
-
   const [index, setIndex] = useState(-1);
-
-  console.log(photos)
 
   return (
     <main id="gallery">
@@ -36,46 +27,49 @@ function Gallery() {
         </div>
       </section>
 
-      <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
-        <section className="section gallery">
-          <div className="mw-wrapper">
-            <Tabs>
-              <TabList>
-                <Tab>Zdjęcia</Tab>
-                <Tab>Video</Tab>
-              </TabList>
+      <section className="section gallery">
+        <div className="mw-wrapper">
+          <Tabs>
+            <TabList>
+              <Tab>Zdjęcia</Tab>
+              <Tab>Video</Tab>
+            </TabList>
 
-              <TabPanel>
-
+            <TabPanel>
+              <div className='gallery-wrapper'>
                 {photos && photos.map((photo, currIndex) => <img
                   key={photo.id}
+                  className='gallery-item'
                   src={photo.src}
                   onClick={() => setIndex(currIndex)}
                 />)}
 
-                <Lightbox
-                  plugins={[Thumbnails]}
-                  index={index}
-                  slides={photos}
-                  open={index >= 0}
-                  close={() => setIndex(-1)}
-                />
-              </TabPanel>
+              </div>
+            </TabPanel>
 
-              <TabPanel>
+            <TabPanel>
+              <div className='gallery-wrapper'>
                 {videos && videos.map(video => <video
                   key={video.id}
+                  className='gallery-item'
                   src={`${video.src}`}
                   width="320"
                   height="240"
                   controls
                 ></video>)}
-              </TabPanel>
-            </Tabs>
-          </div>
-        </section>
-      </ParallaxBanner>
+              </div>
+            </TabPanel>
+          </Tabs>
+        </div>
+      </section>
+
+      <Lightbox
+        plugins={[Thumbnails]}
+        index={index}
+        slides={photos}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+      />
     </main>
   )
 }

@@ -2,7 +2,7 @@ import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import { useFirestore } from '../hooks/useFirestore';
 
-import BlogPost from './BlogPost';
+import BlogPost from '../ui/BlogPost';
 
 import './Blog.css';
 

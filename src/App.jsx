@@ -10,17 +10,18 @@ import DetailingExternal from './pages/DetailingExternal'
 import DetailingInternal from './pages/DetailingInternal'
 import DetailingAdditional from './pages/DetailingAdditional'
 import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
 
 import Login from './ui/Login'
 import FormGallery from './ui/FormGallery'
 import FormBlog from './ui/FormBlog'
 import Post from './ui/Post'
+import ScrollToTop from './ui/ScrollToTop'
 // import { AuthProvider } from './context/auth'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<Homepage />} />
@@ -37,7 +38,6 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/form-galeria' element={<FormGallery />} />
           <Route path='/form-blog' element={<FormBlog />} />
-
         </Route>
       </Routes>
     </BrowserRouter>
