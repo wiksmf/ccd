@@ -1,7 +1,7 @@
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
-import mapPin from '/public/icons/pin.svg'
+import mapPin from '../../public/icons/pin.svg'
 
 import './Map.css';
 
@@ -9,7 +9,7 @@ function Map() {
   const position = [50.2813, 19.5657];
 
   const legalIcon = new Icon({
-    iconUrl: { mapPin },
+    iconUrl: mapPin,
     iconSize: [40, 40],
   });
 
