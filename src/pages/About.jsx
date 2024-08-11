@@ -5,6 +5,7 @@ import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
 import AboutImg from '../../public/about/4807_0.jpg'
+import bg2 from "../../public/backgrounds/bg-desktop.svg";
 
 import './About.css';
 
@@ -24,7 +25,7 @@ function About() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className="section content">
           <div className="mw-wrapper">
             <div className="about-wrapper">

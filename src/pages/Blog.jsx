@@ -4,6 +4,7 @@ import { useFirestore } from '../hooks/useFirestore';
 
 import BlogPost from '../ui/BlogPost';
 
+import bg2 from "../../public/backgrounds/bg-desktop.svg";
 import './Blog.css';
 
 function Blog() {
@@ -22,7 +23,7 @@ function Blog() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className='section posts'>
           <div className="mw-wrapper">
             {posts && posts.map(post => <BlogPost key={post.id} post={post} />)}

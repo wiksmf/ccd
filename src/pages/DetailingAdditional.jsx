@@ -4,6 +4,7 @@ import './Detailing.css'
 
 import galleryImage1 from '../../public/detailing/standard.png';
 import galleryImage2 from '../../public/detailing/premium.png';
+import bg2 from "../../public/backgrounds/bg-desktop.svg";
 
 function AdditionalDetailing() {
   return (
@@ -19,7 +20,7 @@ function AdditionalDetailing() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className="section detailing">
           <div className="mw-wrapper">
             <p className="txt--b">
