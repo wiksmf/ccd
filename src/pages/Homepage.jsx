@@ -7,6 +7,7 @@ import { useFirestore } from '../hooks/useFirestore';
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
+import bg1 from '../../public/backgrounds/bg-home/bg-1.jpg';
 import img1 from '../../public/home/rim-before.jpg';
 import img2 from '../../public/home/rim-after.jpg';
 
@@ -18,7 +19,7 @@ function Homepage() {
   return (
     <main id="home">
       <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-home/bg-1.jpg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className="section hero hero--lg">
           <div className="mw-wrapper">
             <div className="hero-wrapper">
@@ -126,7 +127,7 @@ function Homepage() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image="public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image="../../public/backgrounds/bg-desktop.svg" style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className="section gallery">
           <div className="mw-wrapper">
             <h2 className="h-h2 d-grid txt--b">
