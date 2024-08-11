@@ -22,15 +22,15 @@ function Homepage() {
         <section className="section hero hero--lg">
           <div className="mw-wrapper">
             <div className="hero-wrapper">
-              <h1 className="h-h1 txt--g txt--g-1">
+              <h1 className="h-h1 txt--g txt--g-1 drop-in">
                 <strong>Detailing z pasją</strong>
               </h1>
 
-              <p className="p p--lg txt--w m-mtb">
+              <p className="p p--lg txt--w m-mtb drop-in-2">
                 Kompleksowa pielęgnacja samochodów
               </p>
 
-              <AnchorLink href={'#offer'} className={'btn-cta'}>
+              <AnchorLink href={'#offer'} className={'btn-cta drop-in-3'}>
                 <strong>Sprawdź ofertę</strong>
               </AnchorLink>
             </div>

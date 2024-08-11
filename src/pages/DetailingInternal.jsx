@@ -106,7 +106,7 @@ function InternalDetailing() {
                   <div className='price-wrapper'>
                     <img
                       loading="lazy"
-                      className='price-img'
+                      className='price-img price-img--1'
                       src={galleryImage1}
                       alt="Detailing aut małych"
                     />
@@ -120,7 +120,7 @@ function InternalDetailing() {
                   <div className='price-wrapper'>
                     <img
                       loading="lazy"
-                      className='price-img'
+                      className='price-img price-img--2'
                       src={galleryImage2}
                       alt="Detailing aut średniej wielkości"
                     />
@@ -134,7 +134,7 @@ function InternalDetailing() {
                   <div className='price-wrapper'>
                     <img
                       loading="lazy"
-                      className='price-img'
+                      className='price-img price-img--3'
                       src={galleryImage3}
                       alt="Detailing aut dużych"
                     />

@@ -63,8 +63,28 @@
 }
 
 #detailing .price-img {
-  width: 30rem;
-  max-width: 30rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+#detailing .price-img--1 {
+  height: 13rem;
+}
+
+#detailing .price-img--2 {
+  height: 12rem;
+}
+
+#detailing .price-img--3 {
+  height: 14rem;
+}
+
+#detailing .price-img--4 {
+  height: 10rem;
+}
+
+#detailing .price-img--5 {
+  height: 10rem;
 }
 
 #detailing .price-txt {
@@ -163,3 +183,27 @@
     max-width: 40rem;
   }
 }
+
+.drop-in {
+  animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-in-2 {
+  animation: drop-in 1200ms ease 500ms backwards;
+}
+
+.drop-in-3 {
+  animation: drop-in 1200ms ease 800ms backwards;
+}
+
+@keyframes drop-in {
+  from {
+   opacity: 0;
+   transform: translateY(-100px);
+  }
+  to {
+   opacity: 1;
+   transform: translate(0px);
+  }
+ }
+ 

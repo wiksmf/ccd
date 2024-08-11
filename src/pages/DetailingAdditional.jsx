@@ -41,19 +41,19 @@ function AdditionalDetailing() {
 
                     <ul className='ul-flex ul-mt'>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                     </ul>
                   </li>
@@ -65,19 +65,19 @@ function AdditionalDetailing() {
 
                     <ul className='ul-flex ul-mt'>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                       <li className="txt--b li-marker">
-                        <strong>Coś tam</strong> - coś tam.
+                        <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
                     </ul>
                   </li>
@@ -93,7 +93,7 @@ function AdditionalDetailing() {
                   <div className='price-wrapper'>
                     <img
                       loading="lazy"
-                      className='price-img'
+                      className='price-img price-img--4'
                       src={galleryImage1}
                       alt="Detailing aut małych"
                     />
@@ -107,7 +107,7 @@ function AdditionalDetailing() {
                   <div className='price-wrapper'>
                     <img
                       loading="lazy"
-                      className='price-img'
+                      className='price-img price-img--5'
                       src={galleryImage2}
                       alt="Detailing aut średniej wielkości"
                     />
@@ -134,22 +134,22 @@ function AdditionalDetailing() {
 
           <ul className='ul-flex ul-mt'>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
             <li className="txt--w li-marker">
-              <strong>Coś tam</strong>
+              <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
           </ul>
         </div>
