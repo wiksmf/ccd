@@ -1,16 +1,47 @@
 .photo {
   position: relative;
-  padding: 1rem;
-  width: var(--img-s);
-  height: calc(var(--img-s) * 1.1547);
-  display: inline-block;
-  font-size: initial;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  margin: var(--img-m);
-  margin-bottom: calc(var(--img-m) - var(--img-s) * 0.2885);
+  visibility:hidden;
+  outline: 3px solid transparent;
 }
 
-.photo:nth-child(odd) {
+.photo::after{
+  content:'';
+  display:block;
+  padding-bottom: 86.602%;
+}
+
+.photo-out{
+  position: absolute;
+  width:96%;
+  padding-bottom: 110.851%;
+  margin:0 2%;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 3px solid transparent;
+  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+.photo-out * {
+  position: absolute;
+  visibility: visible;
+  outline: 3px solid transparent;
+}
+
+.photo-in {
+  display:block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+      -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+          transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+  outline: 3px solid transparent;
+}
+
+.photo:nth-child(odd) .photo-in {
   background-image: linear-gradient(120deg,
     var(--color-gold-5),
     var(--color-gold-2),
@@ -18,7 +49,7 @@
     var(--color-gold-5));
 }
 
-.photo:nth-child(even) {
+.photo:nth-child(even) .photo-in {
   background-image: linear-gradient(180deg,
     var(--color-gold-2),
     var(--color-gold-5),
@@ -26,40 +57,43 @@
     var(--color-gold-2));
 }
 
-.photo-img {
+.photo img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(var(--img-s) - 5px);
-  height: calc(var(--img-s) * 1.1);
+  height: 95%;
+  width: 95%;
   object-fit: cover;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s linear;
+  margin: 0 auto;
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg);
 }
 
-.photo.photo--4 {
-  display: inline-block;
-  background-image: linear-gradient(200deg,
-    var(--color-gold-3),
-    var(--color-gold-1),
-    var(--color-gold-2),
-    var(--color-gold-5));
-}
-
-.photo:hover .photo-img {
-  transform: translate(-50%, -50%) scale(0.99);
-}
-
-@media screen and (min-width: 768px) {
-  .photo-img {
-    width: calc(var(--img-s) - 10px);
+@media screen and (max-width: 600px) {
+  .photo {
+    width: 50%;
+  }
+  .photo:nth-child(3n+3) {
+    margin-left:25%;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width:601px) and (max-width: 889px) {
   .photo {
-    width: var(--img-s);
-    height: calc(var(--img-s) * 1.1547);
+    width: 33.333%;
+  }
+  .photo:nth-child(5n+4) {
+    margin-left:16.666%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .photo {
+    width: 25%;
+  }
+  .photo:nth-child(7n+5) {
+    margin-left:12.5%;
   }
 }

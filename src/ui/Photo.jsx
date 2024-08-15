@@ -6,9 +6,9 @@ function Photo({ images }) {
 
   return (
     <div className="photo-main">
-      <div className="photo-wrapper">
+      <ul className="photo-wrapper">
         {images.map(img => <PhotoItem key={img.id} src={img.src} />)}
-      </div>
+      </ul>
     </div>
   )
 }

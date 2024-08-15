@@ -318,6 +318,35 @@ p.p--lg {
   background-position: 99% 99%;
 }
 
+/* ANIMATION */
+.drop {
+  opacity: 0;
+}
+
+.drop-in {
+  animation: drop-in 2s ease 200ms forwards;
+}
+
+.drop-in-2 {
+  animation: drop-in 2s ease 500ms forwards;
+}
+
+.drop-in-3 {
+  animation: drop-in 2s ease 800ms forwards;
+}
+
+@keyframes drop-in {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+ }
+ 
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 425px) {
   :root {
