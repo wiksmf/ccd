@@ -1,0 +1,62 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.svg {
+  width: 7vw;
+  height: 7vw;
+}
+
+.hex {
+  fill: rgba(255,255,255,.9);
+  fill: url(#grad);
+  transform-origin: 50% 50%;
+  animation: fadein 3.3s infinite;
+  opacity: 1;
+}
+
+.hex:nth-child(2) {
+  fill: url(#grad2);
+  animation-delay: .2s;
+}
+
+.hex:nth-child(3) {
+  fill: url(#grad3);
+  animation-delay: .4s;
+}
+
+.hex:nth-child(4) {
+  fill: url(#grad4);
+  animation-delay: .6s;
+}
+
+.hex:nth-child(5) {
+  fill: url(#grad5);
+  animation-delay: .8s;
+}
+
+.hex:nth-child(6) {
+  fill: url(#grad6);
+  animation-delay: 1.0s;
+}
+
+.hex:nth-child(7) {
+  fill: none;
+  animation: none;
+	opacity: 1;
+}
+
+@keyframes fadein {
+  0%, 100% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  
+  33%, 66% {
+    transform: scale(0.9, 0.9);
+    opacity: 1;
+  }
+}

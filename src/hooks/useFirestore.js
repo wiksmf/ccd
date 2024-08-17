@@ -5,6 +5,7 @@ import { db } from '../firebase/config';
 
 export function useFirestore(collectionName, maxItems) {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -19,15 +20,16 @@ export function useFirestore(collectionName, maxItems) {
           querySnapshot.forEach((doc) => {
             dbItems.push(doc.data());
           });
-          setItems(dbItems)
+          setItems(dbItems);
+          setTimeout(() => setIsLoading(false), 1500);
         });
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
 
     getData();
-  }, [collectionName]);
+  }, [collectionName, isLoading]);
 
-  return { items };
+  return { items, isLoading };
 }

@@ -4,11 +4,12 @@ import { useFirestore } from '../hooks/useFirestore';
 
 import BlogPost from '../ui/BlogPost';
 
-import bg2 from "../../public/backgrounds/bg-desktop.svg";
+import bg2 from "../../public/images/bg/bg-desktop.svg";
 import './Blog.css';
+import Loader from '../ui/Loader';
 
 function Blog() {
-  const { items: posts } = useFirestore('posts')
+  const { items: posts, isLoading } = useFirestore('posts')
 
   return (
     <main id="blog">
@@ -25,9 +26,14 @@ function Blog() {
       <ParallaxBanner>
         <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className='section posts'>
-          <div className="mw-wrapper">
-            {posts && posts.map(post => <BlogPost key={post.id} post={post} />)}
-          </div>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <div className="mw-wrapper">
+              {posts && posts.map(post => <BlogPost key={post.id} post={post} />)}
+            </div>
+          )}
+
         </section>
       </ParallaxBanner>
     </main>

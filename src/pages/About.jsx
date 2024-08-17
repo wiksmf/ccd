@@ -1,11 +1,11 @@
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { HashLink } from 'react-router-hash-link';
 import { useFirestore } from '../hooks/useFirestore';
 
-import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
-import AboutImg from '../../public/about/4807_0.jpg'
-import bg2 from "../../public/backgrounds/bg-desktop.svg";
+import AboutImg from '../../public/images/about/4807_0.jpg'
+import bg1 from "../../public/images/bg/bg-desktop.svg";
 
 import './About.css';
 
@@ -25,7 +25,7 @@ function About() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
         <section className="section content">
           <div className="mw-wrapper">
             <div className="about-wrapper">
@@ -77,10 +77,9 @@ function About() {
                 Jeśli szukasz profesjonalnej firmy auto detailingu, która z dbałością o każdy szczegół zadba o Twój samochód, to <strong className="txt--g txt--g-1">zapraszamy do Carbon Care Detailing!</strong> Z przyjemnością odpowiem na Twoje pytania i przedstawię ofertę.
               </p>
 
-
-              <AnchorLink href={'/'} className={'btn-cta'}>
+              <HashLink to="/#offer" className={'btn-cta'}>
                 <strong>Sprawdź ofertę</strong>
-              </AnchorLink>
+              </HashLink>
             </div>
           </div>
         </section>

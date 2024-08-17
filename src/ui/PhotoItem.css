@@ -66,9 +66,12 @@
   object-fit: cover;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   margin: 0 auto;
-  -webkit-transform: rotate3d(0, 0, 0, 0deg);
-  -ms-transform: rotate3d(0, 0, 0, 0deg);
-  transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg);
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s linear;
+}
+
+.photo img:hover {
+  transform: translate(-50%, -50%) scale(0.99);
 }
 
 @media screen and (max-width: 600px) {

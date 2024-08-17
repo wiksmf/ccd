@@ -110,7 +110,7 @@ img {
 
 ul li.li-marker {
   padding-left: 1.7rem;
-  background-image: url('./../../public/icons/li-marker.svg');
+  background-image: url('../../public/images/icons/li-marker.svg');
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 0.95rem;
@@ -131,6 +131,7 @@ ul li.li-marker {
   padding-bottom: 3rem;
 }
 
+.parallax-hero,
 .hero.hero--lg {
   height: 99vh;
   align-items: center;
@@ -495,5 +496,9 @@ p.p--lg {
   :root {
     --img-s: 28rem;
     --img-m: 0.5rem;
+  }
+
+  .hero.hero--sm {
+    height: 35vh;
   }
 }

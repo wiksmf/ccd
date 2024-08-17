@@ -2,9 +2,9 @@ import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import './Detailing.css'
 
-import galleryImage1 from '../../public/detailing/standard.png';
-import galleryImage2 from '../../public/detailing/premium.png';
-import bg2 from "../../public/backgrounds/bg-desktop.svg";
+import galleryImage1 from '../../public/images/detailing/standard.webp';
+import galleryImage2 from '../../public/images/detailing/premium.webp';
+import bg2 from "../../public/images/bg/bg-desktop.svg";
 
 function AdditionalDetailing() {
   return (

@@ -7,10 +7,10 @@ import { useFirestore } from '../hooks/useFirestore';
 import AnchorLink from '../ui/AnchorLink';
 import Photo from '../ui/Photo';
 
-import bg1 from '../../public/backgrounds/bg-home/bg-1.jpg';
-import bg2 from "../../public/backgrounds/bg-desktop.svg";
-import img1 from '../../public/home/rim-before.jpg';
-import img2 from '../../public/home/rim-after.jpg';
+import bg1 from '../../public/images/home/bg-1.webp';
+import bg2 from "../../public/images/bg/bg-desktop.svg";
+import img1 from '../../public/images/home/rim-before.webp';
+import img2 from '../../public/images/home/rim-after.webp';
 
 import './Homepage.css';
 
@@ -19,26 +19,28 @@ function Homepage() {
 
   return (
     <main id="home">
-      <ParallaxBanner>
-        <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
-        <section className="section hero hero--lg">
-          <div className="mw-wrapper">
-            <div className="hero-wrapper">
-              <h1 className="h-h1 txt--g txt--g-1 drop drop-in">
-                <strong>Detailing z pasją</strong>
-              </h1>
+      <section className='parallax-hero'>
+        <ParallaxBanner>
+          <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+          <div className="section hero hero--lg">
+            <div className="mw-wrapper">
+              <div className="hero-wrapper">
+                <h1 className="h-h1 txt--g txt--g-1 drop drop-in">
+                  <strong>Detailing z pasją</strong>
+                </h1>
 
-              <p className="p p--lg txt--w m-mtb drop drop-in-2">
-                Kompleksowa pielęgnacja samochodów
-              </p>
+                <p className="p p--lg txt--w m-mtb drop drop-in-2">
+                  Kompleksowa pielęgnacja samochodów
+                </p>
 
-              <AnchorLink href={'#offer'} className={'btn-cta drop drop-in-3'}>
-                <strong>Sprawdź ofertę</strong>
-              </AnchorLink>
+                <AnchorLink href={'#offer'} className={'btn-cta drop drop-in-3'}>
+                  <strong>Sprawdź ofertę</strong>
+                </AnchorLink>
+              </div>
             </div>
           </div>
-        </section>
-      </ParallaxBanner>
+        </ParallaxBanner>
+      </section>
 
       <section className="section" id='offer'>
         <div className="mw-wrapper">

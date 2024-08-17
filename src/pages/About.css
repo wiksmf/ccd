@@ -1,5 +1,5 @@
 #about .hero {
-  background-image: url(../../public/backgrounds/bg-about/bg-1.webp);
+  background-image: url(/public/images/about/bg-1.webp);
 }
 
 #about .about-flex {
@@ -63,15 +63,10 @@
 
 #about .products {
   position: relative;
-  background-image: url(../../public/backgrounds/bg-about/bg-2.jpg);
+  background-image: url(./public/images/about/bg-2.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-image: radial-gradient(circle at 60% bottom, 
-    var(--color-dark-1), 
-    var(--color-dark-2), 
-    var(--color-dark-3)
-  ); */
 }
 
 #about .products::before {

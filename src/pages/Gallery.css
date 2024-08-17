@@ -45,10 +45,15 @@
 }
 
 #gallery {
-  background-image: url(../../public/backgrounds/bg-desktop.svg);
+  background-image: url(../../public/images/bg/bg-desktop.svg);
   background-size: contain;
   background-repeat: repeat;
 }
+
+#gallery .hero {
+  background-image: url(/public/images/gallery/bg-1.webp);
+}
+
 
 #gallery .gallery-wrapper {
   display: flex;

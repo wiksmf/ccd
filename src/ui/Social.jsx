@@ -1,7 +1,7 @@
 import SocialItem from './SocialItem'
 
-import facebook from '../../public/icons/facebook.svg'
-import instagram from '../../public/icons/instagram.svg'
+import facebook from '../../public/images/icons/facebook.svg'
+import instagram from '../../public/images/icons/instagram.svg'
 
 import './Social.css'
 

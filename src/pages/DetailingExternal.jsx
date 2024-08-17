@@ -2,10 +2,10 @@ import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import './Detailing.css'
 
-import galleryImage1 from '../../public/detailing/car-sm.png';
-import galleryImage2 from '../../public/detailing/car-md.png';
-import galleryImage3 from '../../public/detailing/car-lg.png';
-import bg2 from "../../public/backgrounds/bg-desktop.svg";
+import galleryImage1 from '../../public/images/detailing/car-sm.webp';
+import galleryImage2 from '../../public/images/detailing/car-md.webp';
+import galleryImage3 from '../../public/images/detailing/car-lg.webp';
+import bg2 from "../../public/images/bg/bg-desktop.svg";
 
 function ExternalDetailing() {
   return (
@@ -155,7 +155,7 @@ function ExternalDetailing() {
                     />
 
                     <div className='price-txt'>
-                      <p className="p--md txt--b">Detailing aut średniej wielkości <br /></p>
+                      <p className="p--md txt--b">Detailing aut średnich <br /></p>
                       <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
                     </div>
                   </div>

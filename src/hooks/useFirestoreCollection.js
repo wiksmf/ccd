@@ -5,6 +5,7 @@ import { db } from '../firebase/config';
 
 export function useFirestoreCollection(collectionName, postId = '') {
   const [post, setPost] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!postId) return;
@@ -21,6 +22,7 @@ export function useFirestoreCollection(collectionName, postId = '') {
           const postDatas = docSnap.data();
 
           setPost(postDatas);
+          setTimeout(() => setIsLoading(false), 1500);
         } else {
           console.log('Post not found');
           return null;
@@ -30,8 +32,8 @@ export function useFirestoreCollection(collectionName, postId = '') {
       }
     }
     getPost();
-  }, [postId]);
+  }, [postId, isLoading]);
 
 
-  return { post };
+  return { post, isLoading };
 }

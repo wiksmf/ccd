@@ -10,7 +10,7 @@ function Header() {
     <header className="header">
       <div className="mw-wrapper">
         <div className="header-wrapper">
-          <Link to='/'>
+          <Link to='/' className='logo-link'>
             <Logo />
           </Link>
 

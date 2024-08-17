@@ -5,11 +5,12 @@ import parse from 'html-react-parser';
 
 
 import './Post.css';
+import Loader from './Loader';
 
 function Post() {
   const id = useParams();
   const navigate = useNavigate();
-  const { post } = useFirestoreCollection('posts', id);
+  const { post, isLoading } = useFirestoreCollection('posts', id);
 
   const options = {
     weekday: 'long',
@@ -41,11 +42,16 @@ function Post() {
               <span className='post-back--disabled'> / {post.title}</span>
             </div>
 
-
-            <h2 className='post-title'>{post.title}</h2>
-            <span className="post-date">{post.createdAt?.toDate().toLocaleDateString('pl-PL', options)}</span>
-            <img className="post-img" key={post.id} src={post.src} />
-            {parse(`<p className='post-content'>${post.content}</p>`)}
+            {isLoading ? (
+              <Loader />
+            ) : (
+              <>
+                <h2 className='post-title'>{post.title}</h2>
+                <span className="post-date">{post.createdAt?.toDate().toLocaleDateString('pl-PL', options)}</span>
+                <img className="post-img" key={post.id} src={post.src} />
+                {parse(`<p className='post-content'>${post.content}</p>`)}
+              </>
+            )}
           </div>
         </section>
       </ParallaxBanner>

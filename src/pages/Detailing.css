@@ -1,13 +1,13 @@
 #detailing.external .hero {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-1.jpg);
+  background-image: url(../../public/images/detailing/bg-1.webp);
 }
 
 #detailing.internal .hero {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-3.jpg);
+  background-image: url(../../public/images/detailing/bg-3.webp);
 }
 
 #detailing.additional .hero {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-5.jpg);
+  background-image: url(../../public/images/detailing/bg-5.webp);
 }
 
 #detailing .detailing-flex {
@@ -68,15 +68,15 @@
 }
 
 #detailing .price-img--1 {
-  height: 13rem;
+  height: 9rem;
 }
 
 #detailing .price-img--2 {
-  height: 12rem;
+  height: 11rem;
 }
 
 #detailing .price-img--3 {
-  height: 14rem;
+  height: 13rem;
 }
 
 #detailing .price-img--4 {
@@ -84,7 +84,7 @@
 }
 
 #detailing .price-img--5 {
-  height: 10rem;
+  height: 12rem;
 }
 
 #detailing .price-txt {
@@ -99,15 +99,15 @@
 }
 
 #detailing.external .results {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-2.webp);
+  background-image: url(../../public/images/detailing/bg-2.webp);
 }
 
 #detailing.internal .results {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-4.jpg);
+  background-image: url(../../public/images/detailing/bg-4.webp);
 }
 
 #detailing.additional .results {
-  background-image: url(../../public/backgrounds/bg-detailing/bg-6.jpg);
+  background-image: url(../../public/images/detailing/bg-6.webp);
 }
 
 #detailing .results::before {

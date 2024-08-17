@@ -1,7 +1,7 @@
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
-import mapPin from '../../public/icons/pin.svg'
+import mapPin from '../../public/images/icons/pin.svg'
 
 import './Map.css';
 

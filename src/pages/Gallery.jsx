@@ -9,10 +9,11 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import 'react-tabs/style/react-tabs.css';
 import './Gallery.css'
+import Loader from '../ui/Loader';
 
 function Gallery() {
-  const { items: photos } = useFirestore('photos')
-  const { items: videos } = useFirestore('videos')
+  const { items: photos, isLoading: isLoadingPhoto } = useFirestore('photos')
+  const { items: videos, isLoading: isLoadingVideo } = useFirestore('videos')
   const [index, setIndex] = useState(-1);
 
   return (
@@ -37,26 +38,29 @@ function Gallery() {
 
             <TabPanel>
               <div className='gallery-wrapper'>
-                {photos && photos.map((photo, currIndex) => <img
+                {isLoadingPhoto ? (
+                  <Loader />
+                ) : (photos && photos.map((photo, currIndex) => <img
                   key={photo.id}
                   className='gallery-item'
                   src={photo.src}
                   onClick={() => setIndex(currIndex)}
-                />)}
-
+                />))}
               </div>
             </TabPanel>
 
             <TabPanel>
               <div className='gallery-wrapper'>
-                {videos && videos.map(video => <video
+                {isLoadingVideo ? (
+                  <Loader />
+                ) : (videos && videos.map(video => <video
                   key={video.id}
                   className='gallery-item'
                   src={`${video.src}`}
                   width="320"
                   height="240"
                   controls
-                ></video>)}
+                ></video>))}
               </div>
             </TabPanel>
           </Tabs>
