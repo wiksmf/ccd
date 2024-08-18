@@ -1,8 +1,9 @@
 import { HiOutlineMapPin, HiOutlinePhone } from "react-icons/hi2";
 
-import './Contact.css'
-import AnchorLink from './AnchorLink';
-import Map from './Map';
+import AnchorLink from "./AnchorLink";
+import Map from "./Map";
+
+import "./Contact.css"
 
 function Contact() {
   return (
@@ -17,7 +18,7 @@ function Contact() {
         <div className="contact-wrapper">
           <ul className="contact-list m-mb">
             <li className="contact-li">
-              <span className='contact-icon contact-icon--pin'>
+              <span className="contact-icon contact-icon--pin">
                 <HiOutlineMapPin />
               </span>
 
@@ -29,11 +30,11 @@ function Contact() {
             </li>
 
             <li className="contact-li">
-              <span className='contact-icon contact-icon--phone'>
+              <span className="contact-icon contact-icon--phone">
                 <HiOutlinePhone />
               </span>
 
-              <AnchorLink href={'tel:+48XXXXXXXXX'} className={'p txt--b'}>
+              <AnchorLink href={"tel:+48XXXXXXXXX"} className={"p txt--b"}>
                 <strong>+48 XXX XXX XXX</strong>
               </AnchorLink>
             </li>

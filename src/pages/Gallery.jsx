@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import { Thumbnails } from 'yet-another-react-lightbox/plugins';
+import { useState } from "react";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { Thumbnails } from "yet-another-react-lightbox/plugins";
 import Lightbox from "yet-another-react-lightbox";
+import { useFirestore } from "../hooks/useFirestore";
 
-import { useFirestore } from '../hooks/useFirestore';
+import Loader from "../ui/Loader";
 
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import 'react-tabs/style/react-tabs.css';
-import './Gallery.css'
-import Loader from '../ui/Loader';
+import "react-tabs/style/react-tabs.css";
+import "./Gallery.css"
 
 function Gallery() {
-  const { items: photos, isLoading: isLoadingPhoto } = useFirestore('photos')
-  const { items: videos, isLoading: isLoadingVideo } = useFirestore('videos')
+  const { items: photos, isLoading: isLoadingPhoto } = useFirestore("photos");
+  const { items: videos, isLoading: isLoadingVideo } = useFirestore("videos");
   const [index, setIndex] = useState(-1);
 
   return (
@@ -37,12 +37,12 @@ function Gallery() {
             </TabList>
 
             <TabPanel>
-              <div className='gallery-wrapper'>
+              <div className="gallery-wrapper">
                 {isLoadingPhoto ? (
                   <Loader />
                 ) : (photos && photos.map((photo, currIndex) => <img
                   key={photo.id}
-                  className='gallery-item'
+                  className="gallery-item"
                   src={photo.src}
                   onClick={() => setIndex(currIndex)}
                 />))}
@@ -50,12 +50,12 @@ function Gallery() {
             </TabPanel>
 
             <TabPanel>
-              <div className='gallery-wrapper'>
+              <div className="gallery-wrapper">
                 {isLoadingVideo ? (
                   <Loader />
                 ) : (videos && videos.map(video => <video
                   key={video.id}
-                  className='gallery-item'
+                  className="gallery-item"
                   src={`${video.src}`}
                   width="320"
                   height="240"
@@ -78,4 +78,4 @@ function Gallery() {
   )
 }
 
-export default Gallery
+export default Gallery;

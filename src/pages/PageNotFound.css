@@ -1,0 +1,11 @@
+.not-found  {
+  background-image: url(../../public/images/not-found/not-found.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.not-found .h-h1 {
+  font-size: 15vw;
+  line-height: 20vw;
+  filter: drop-shadow(7px 7px var(--color-dark-3));
+}

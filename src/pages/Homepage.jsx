@@ -1,27 +1,26 @@
-import { Link } from 'react-router-dom';
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-import ReactCompareImage from 'react-compare-image';
+import { Link } from "react-router-dom";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import ReactCompareImage from "react-compare-image";
+import { useFirestore } from "../hooks/useFirestore";
 
-import { useFirestore } from '../hooks/useFirestore';
+import AnchorLink from "../ui/AnchorLink";
+import Photo from "../ui/Photo";
 
-import AnchorLink from '../ui/AnchorLink';
-import Photo from '../ui/Photo';
-
-import bg1 from '../../public/images/home/bg-1.webp';
+import bg1 from "../../public/images/home/bg-1.webp";
 import bg2 from "../../public/images/bg/bg-desktop.svg";
-import img1 from '../../public/images/home/rim-before.webp';
-import img2 from '../../public/images/home/rim-after.webp';
+import img1 from "../../public/images/home/rim-before.webp";
+import img2 from "../../public/images/home/rim-after.webp";
 
-import './Homepage.css';
+import "./Homepage.css";
 
 function Homepage() {
-  const { items: galleryImages } = useFirestore('photos', 7)
+  const { items: galleryImages } = useFirestore("photos", 7);
 
   return (
     <main id="home">
-      <section className='parallax-hero'>
+      <section className="parallax-hero">
         <ParallaxBanner>
-          <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+          <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: "fixed" }} speed={-50} />
           <div className="section hero hero--lg">
             <div className="mw-wrapper">
               <div className="hero-wrapper">
@@ -33,7 +32,7 @@ function Homepage() {
                   Kompleksowa pielęgnacja samochodów
                 </p>
 
-                <AnchorLink href={'#offer'} className={'btn-cta drop drop-in-3'}>
+                <AnchorLink href={"#offer"} className={"btn-cta drop drop-in-3"}>
                   <strong>Sprawdź ofertę</strong>
                 </AnchorLink>
               </div>
@@ -42,7 +41,7 @@ function Homepage() {
         </ParallaxBanner>
       </section>
 
-      <section className="section" id='offer'>
+      <section className="section" id="offer">
         <div className="mw-wrapper">
           <h2 className="h-h2 d-grid txt--b m-mb">
             <span className="d-grid--line"></span>
@@ -58,7 +57,7 @@ function Homepage() {
                 </h3>
 
                 <Link
-                  to='/detailing-zewnetrzny'
+                  to="/detailing-zewnetrzny"
                   className="offer-link btn-cta"
                 >
                   <strong>Dowiedz się więcej</strong>
@@ -72,7 +71,7 @@ function Homepage() {
                 </h3>
 
                 <Link
-                  to='/detailing-wewnetrzny'
+                  to="/detailing-wewnetrzny"
                   className="offer-link btn-cta"
                 >
                   <strong>Dowiedz się więcej</strong>
@@ -86,7 +85,7 @@ function Homepage() {
                 </h3>
 
                 <Link
-                  to='/uslugi-dodatkowe'
+                  to="/uslugi-dodatkowe"
                   className="offer-link btn-cta"
                 >
                   <strong>Dowiedz się więcej</strong>
@@ -120,7 +119,7 @@ function Homepage() {
             </div>
 
             <Link
-              to='/o-mnie'
+              to="/o-mnie"
               className="btn-cta btn-cta--g"
             >
               <strong>Poznajmy się</strong>
@@ -130,7 +129,7 @@ function Homepage() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
         <section className="section gallery">
           <div className="mw-wrapper">
             <h2 className="h-h2 d-grid txt--b">
@@ -142,7 +141,7 @@ function Homepage() {
             <Photo images={galleryImages} />
 
             <Link
-              to='/galeria'
+              to="/galeria"
               className="btn-cta"
             >
               <strong>Obejrzyj realizacje</strong>
@@ -154,4 +153,4 @@ function Homepage() {
   )
 }
 
-export default Homepage
+export default Homepage;

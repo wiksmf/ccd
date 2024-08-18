@@ -1,15 +1,15 @@
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { useFirestore } from "../hooks/useFirestore";
 
-import { useFirestore } from '../hooks/useFirestore';
-
-import BlogPost from '../ui/BlogPost';
+import BlogPost from "../ui/BlogPost";
+import Loader from "../ui/Loader";
 
 import bg2 from "../../public/images/bg/bg-desktop.svg";
-import './Blog.css';
-import Loader from '../ui/Loader';
+
+import "./Blog.css";
 
 function Blog() {
-  const { items: posts, isLoading } = useFirestore('posts')
+  const { items: posts, isLoading } = useFirestore("posts");
 
   return (
     <main id="blog">
@@ -24,8 +24,8 @@ function Blog() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
-        <section className='section posts'>
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
+        <section className="section posts">
           {isLoading ? (
             <Loader />
           ) : (
@@ -40,4 +40,4 @@ function Blog() {
   )
 }
 
-export default Blog
+export default Blog;

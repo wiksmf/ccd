@@ -13,4 +13,4 @@ function SocialItem({ src }) {
   )
 }
 
-export default SocialItem
+export default SocialItem;

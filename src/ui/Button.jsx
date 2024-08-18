@@ -1,4 +1,4 @@
-import './Button.css';
+import "./Button.css";
 
 function Button({ children, className, aria, onClick }) {
   return (
@@ -8,4 +8,4 @@ function Button({ children, className, aria, onClick }) {
   )
 }
 
-export default Button
+export default Button;

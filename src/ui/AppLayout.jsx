@@ -1,10 +1,10 @@
-import { Outlet } from 'react-router-dom'
-import { ParallaxProvider } from 'react-scroll-parallax'
+import { Outlet } from "react-router-dom"
+import { ParallaxProvider } from "react-scroll-parallax"
 
-import Header from './Header'
-import Footer from './Footer'
-import Contact from './Contact'
-import Social from './Social'
+import Header from "./Header"
+import Footer from "./Footer"
+import Contact from "./Contact"
+import Social from "./Social"
 
 function AppLayout() {
   return (
@@ -18,4 +18,4 @@ function AppLayout() {
   )
 }
 
-export default AppLayout
+export default AppLayout;

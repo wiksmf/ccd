@@ -1,9 +1,9 @@
-import SocialItem from './SocialItem'
+import SocialItem from "./SocialItem";
 
-import facebook from '../../public/images/icons/facebook.svg'
-import instagram from '../../public/images/icons/instagram.svg'
+import facebook from "../../public/images/icons/facebook.svg";
+import instagram from "../../public/images/icons/instagram.svg";
 
-import './Social.css'
+import "./Social.css";
 
 function Social() {
   return (
@@ -14,4 +14,4 @@ function Social() {
   )
 }
 
-export default Social
+export default Social;

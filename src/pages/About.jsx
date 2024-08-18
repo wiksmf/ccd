@@ -1,16 +1,16 @@
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-import { HashLink } from 'react-router-hash-link';
-import { useFirestore } from '../hooks/useFirestore';
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { HashLink } from "react-router-hash-link";
+import { useFirestore } from "../hooks/useFirestore";
 
-import Photo from '../ui/Photo';
+import Photo from "../ui/Photo";
 
-import AboutImg from '../../public/images/about/4807_0.jpg'
+import AboutImg from "../../public/images/about/4807_0.jpg";
 import bg1 from "../../public/images/bg/bg-desktop.svg";
 
-import './About.css';
+import "./About.css";
 
 function About() {
-  const { items: galleryImages } = useFirestore('products')
+  const { items: galleryImages } = useFirestore("products");
 
   return (
     <main id="about">
@@ -25,11 +25,11 @@ function About() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: "fixed" }} speed={-50} />
         <section className="section content">
           <div className="mw-wrapper">
             <div className="about-wrapper">
-              <div className='about-flex'>
+              <div className="about-flex">
                 <div className="about-txt">
                   <p className="txt--b">
                     Kocham samochody i dbam o nie z prawdziwą pasją. Auto detailing to dla mnie nie tylko zawód, ale przede wszystkim sposób na wyrażanie mojej miłości do detali i dbałości o perfekcję.
@@ -41,10 +41,10 @@ function About() {
                   </p>
                 </div>
 
-                <div className='about-img'>
+                <div className="about-img">
                   <img
                     loading="lazy"
-                    className='about-img--img'
+                    className="about-img--img"
                     src={AboutImg}
                     alt="Detailing z miłością - Twój samochód w najlepszych rękach!"
                   />
@@ -55,7 +55,7 @@ function About() {
                 <strong>Dlaczego warto wybrać Carbon Care Detailing?</strong>
               </h2>
 
-              <ul className='ul-flex'>
+              <ul className="ul-flex">
                 <li className="txt--b li-marker ul-mt">
                   <strong>Doświadczenie i profesjonalizm</strong> - posiadam wieloletnie doświadczenie i nieustannie poszerzam swoją wiedzę i umiejętności, aby móc oferować usługi na najwyższym poziomie
                 </li>
@@ -77,7 +77,7 @@ function About() {
                 Jeśli szukasz profesjonalnej firmy auto detailingu, która z dbałością o każdy szczegół zadba o Twój samochód, to <strong className="txt--g txt--g-1">zapraszamy do Carbon Care Detailing!</strong> Z przyjemnością odpowiem na Twoje pytania i przedstawię ofertę.
               </p>
 
-              <HashLink to="/#offer" className={'btn-cta'}>
+              <HashLink to="/#offer" className={"btn-cta"}>
                 <strong>Sprawdź ofertę</strong>
               </HashLink>
             </div>
@@ -101,4 +101,4 @@ function About() {
   )
 }
 
-export default About
+export default About;

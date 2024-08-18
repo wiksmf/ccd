@@ -6,8 +6,8 @@
 }
 
 .svg {
-  width: 7vw;
-  height: 7vw;
+  width: 12.5rem;
+  height: 12.5rem;
 }
 
 .hex {
@@ -58,5 +58,12 @@
   33%, 66% {
     transform: scale(0.9, 0.9);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .svg {
+    width: 15rem;
+    height: 15rem;
   }
 }

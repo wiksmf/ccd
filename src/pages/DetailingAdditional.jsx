@@ -1,14 +1,14 @@
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-import './Detailing.css'
-
-import galleryImage1 from '../../public/images/detailing/standard.webp';
-import galleryImage2 from '../../public/images/detailing/premium.webp';
+import galleryImage1 from "../../public/images/detailing/standard.webp";
+import galleryImage2 from "../../public/images/detailing/premium.webp";
 import bg2 from "../../public/images/bg/bg-desktop.svg";
+
+import "./Detailing.css";
 
 function AdditionalDetailing() {
   return (
-    <main id="detailing" className='additional'>
+    <main id="detailing" className="additional">
       <section className="section hero hero--sm">
         <div className="mw-wrapper">
           <div className="hero-wrapper">
@@ -20,27 +20,27 @@ function AdditionalDetailing() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
         <section className="section detailing">
           <div className="mw-wrapper">
             <p className="txt--b">
               Chcesz jeszcze bardziej zadbać o swoje auto i cieszyć się jego nienagannym wyglądem przez dłuższy czas? Skorzystaj z usług dodatkowych!
             </p>
 
-            <div className='detailing-flex'>
+            <div className="detailing-flex">
               <div className="detailing-left">
 
                 <p className="p--md m-mtb txt--g txt--g-1">
                   <strong>Zadbaj o każdy szczegół Twojego auta!</strong>
                 </p>
 
-                <ol className='ul-flex ol-ml'>
+                <ol className="ul-flex ol-ml">
                   <li>
                     <p className="txt--b">
                       <strong>Pakiet standard</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
@@ -64,7 +64,7 @@ function AdditionalDetailing() {
                       <strong>Pakiet premium</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Lorem ipsum dolor sit amet</strong> - consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </li>
@@ -90,32 +90,32 @@ function AdditionalDetailing() {
                   <strong>Cennik</strong>
                 </h2>
 
-                <div className='price'>
-                  <div className='price-wrapper'>
+                <div className="price">
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--4'
+                      className="price-img price-img--4"
                       src={galleryImage1}
                       alt="Detailing aut małych"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Pakiet standard<br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
 
-                  <div className='price-wrapper'>
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--5'
+                      className="price-img price-img--5"
                       src={galleryImage2}
                       alt="Detailing aut średniej wielkości"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Pakiet premium <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ function AdditionalDetailing() {
             </strong>
           </h2>
 
-          <ul className='ul-flex ul-mt'>
+          <ul className="ul-flex ul-mt">
             <li className="txt--w li-marker">
               <strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</strong>
             </li>
@@ -159,4 +159,4 @@ function AdditionalDetailing() {
   )
 }
 
-export default AdditionalDetailing
+export default AdditionalDetailing;

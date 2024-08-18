@@ -1,15 +1,15 @@
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-import './Detailing.css'
-
-import galleryImage1 from '../../public/images/detailing/car-sm.webp';
-import galleryImage2 from '../../public/images/detailing/car-md.webp';
-import galleryImage3 from '../../public/images/detailing/car-lg.webp';
+import galleryImage1 from "../../public/images/detailing/car-sm.webp";
+import galleryImage2 from "../../public/images/detailing/car-md.webp";
+import galleryImage3 from "../../public/images/detailing/car-lg.webp";
 import bg2 from "../../public/images/bg/bg-desktop.svg";
+
+import "./Detailing.css";
 
 function InternalDetailing() {
   return (
-    <main id="detailing" className='internal'>
+    <main id="detailing" className="internal">
       <section className="section hero hero--sm">
         <div className="mw-wrapper">
           <div className="hero-wrapper">
@@ -21,27 +21,27 @@ function InternalDetailing() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
         <section className="section detailing">
           <div className="mw-wrapper">
             <p className="txt--b">
               Detailing wnętrza to kompleksowy proces pielęgnacji, który zamieni zakurzone i zaniedbane wnętrze Twojego samochodu w pachnącą i lśniącą oazę komfortu.
             </p>
 
-            <div className='detailing-flex'>
+            <div className="detailing-flex">
               <div className="detailing-left">
 
                 <p className="p--md m-mtb txt--g txt--g-1">
                   <strong>Podaruj sobie i swojemu autu odrobinę luksusu!</strong>
                 </p>
 
-                <ol className='ul-flex ol-ml'>
+                <ol className="ul-flex ol-ml">
                   <li>
                     <p className="txt--b">
                       <strong>Skrupulatne czyszczenie każdego zakamarka</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Dokładne odkurzanie i usuwanie brudu</strong> - z podsufitki, siedzeń, schowków, kokpitu, przycisków, kratek nawiewu, podłogi i bagażnika.
                       </li>
@@ -65,7 +65,7 @@ function InternalDetailing() {
                       <strong>Rewitalizacja i ochrona</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Ekstrakcyjne pranie podsufitki</strong> - słupki, pasy bezpieczeństwa, lampki, słoneczniki, rączki.
                       </li>
@@ -83,7 +83,7 @@ function InternalDetailing() {
                       <strong>Coś tam</strong> - coś tam.
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Coś tam</strong> - coś tam.
                       </li>
@@ -103,46 +103,46 @@ function InternalDetailing() {
                   <strong>Cennik</strong>
                 </h2>
 
-                <div className='price'>
-                  <div className='price-wrapper'>
+                <div className="price">
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--1'
+                      className="price-img price-img--1"
                       src={galleryImage1}
                       alt="Detailing aut małych"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut małych <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
 
-                  <div className='price-wrapper'>
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--2'
+                      className="price-img price-img--2"
                       src={galleryImage2}
                       alt="Detailing aut średniej wielkości"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut średnich<br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
 
-                  <div className='price-wrapper'>
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--3'
+                      className="price-img price-img--3"
                       src={galleryImage3}
                       alt="Detailing aut dużych"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut dużych <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ function InternalDetailing() {
             </strong>
           </h2>
 
-          <ul className='ul-flex ul-mt'>
+          <ul className="ul-flex ul-mt">
             <li className="txt--w li-marker">
               <strong>Idealnie czyste i pachnące świeżością wnętrze</strong>
             </li>
@@ -186,4 +186,4 @@ function InternalDetailing() {
   )
 }
 
-export default InternalDetailing
+export default InternalDetailing;

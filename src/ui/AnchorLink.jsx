@@ -6,4 +6,4 @@ function AnchorLink({ children, href, className }) {
   )
 }
 
-export default AnchorLink
+export default AnchorLink;

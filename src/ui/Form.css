@@ -1,50 +1,80 @@
-#upload.form {
+#form.login .section {
+  padding-top: 20rem;
+}
+
+#form.media .section {
+  padding-top: 12rem;
+}
+
+#form .mw-wrapper,
+#form .form-wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
-  padding: 15rem;
-}
-
-#upload.form .fieldset {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
-  padding: 2rem 3rem;
-}
-
-#upload.form .legend {
-  font-size: 2rem;
-  line-height: 2.2rem;
-}
-
-#upload.form .label {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-}
-
-
-#upload.form .input:not([type="file"]) {
-  font-size: 1.8rem;
-  line-height: 2rem;
-  border-radius: 5px;
-  border: 1px solid black;
-  padding: 0.5rem 1rem;
   width: 100%;
 }
 
-#upload.form .btn {
-  font-size: 1.8rem;
-  line-height: 2rem;
-  color: white;
-  border-radius: 5px;
-  background-color: black;
-  width:fit-content;
-  padding: 1rem 1.2rem;
+#form .btn-cta {
+  margin-right: 0;
+  color: var(--color-dark-3);
+  padding: 1.5rem 3rem;
 }
 
-#upload.form .btn:disabled {
-  opacity: 0.5;
+#form-login,
+#form-media,
+#form-blog {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+#form .p {
+  font-size: 3rem;
+  line-height: 3.3rem;
+}
+
+#form .label span {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  margin-right: 1rem;
+}
+
+#form .input {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  border: 1px solid var(--color-dark-3);
+  border-radius: var(--border-radius);
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+#form .textarea {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  border: 1px solid var(--color-dark-3);
+  border-radius: var(--border-radius);
+  min-height: 20rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+#form .btn-form {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--color-dark-3);
+  margin-right: 0;
+  padding: 1.2rem 3rem;
+  border: 1px solid var(--color-dark-3);
+  border-radius: var(--border-radius);
+  width: fit-content;
+}
+
+#form .btn-form:hover {
+  background-color: var(--color-dark-3);
+  color: var(--color-light-1);
 }

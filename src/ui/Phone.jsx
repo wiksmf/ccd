@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { HiOutlinePhone } from "react-icons/hi2"
+import { useState } from "react";
+import { HiOutlinePhone } from "react-icons/hi2";
 
-import Button from './Button'
-import AnchorLink from './AnchorLink'
+import Button from "./Button";
+import AnchorLink from "./AnchorLink";
 
-import './Phone.css'
+import "./Phone.css";
 
 function Phone() {
   const [showPhone, setShowPhone] = useState(false)
@@ -14,8 +14,8 @@ function Phone() {
   }
 
   return (
-    <div className={`phone ${showPhone ? 'phone--show' : ''}`}>
-      <AnchorLink href={'tel:+48XXXXXXXXX'} className={'phone-a'}>
+    <div className={`phone ${showPhone ? "phone--show" : ""}`}>
+      <AnchorLink href={"tel:+48XXXXXXXXX"} className={"phone-a"}>
         <strong>+48 XXX XXX XXX</strong>
       </AnchorLink>
 
@@ -26,4 +26,4 @@ function Phone() {
   )
 }
 
-export default Phone
+export default Phone;

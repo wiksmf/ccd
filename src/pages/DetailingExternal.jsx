@@ -1,15 +1,15 @@
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-import './Detailing.css'
-
-import galleryImage1 from '../../public/images/detailing/car-sm.webp';
-import galleryImage2 from '../../public/images/detailing/car-md.webp';
-import galleryImage3 from '../../public/images/detailing/car-lg.webp';
+import galleryImage1 from "../../public/images/detailing/car-sm.webp";
+import galleryImage2 from "../../public/images/detailing/car-md.webp";
+import galleryImage3 from "../../public/images/detailing/car-lg.webp";
 import bg2 from "../../public/images/bg/bg-desktop.svg";
+
+import "./Detailing.css";
 
 function ExternalDetailing() {
   return (
-    <main id="detailing" className='external'>
+    <main id="detailing" className="external">
       <section className="section hero hero--sm">
         <div className="mw-wrapper">
           <div className="hero-wrapper">
@@ -21,27 +21,27 @@ function ExternalDetailing() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: 'fixed' }} speed={-50} />
+        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
         <section className="section detailing">
           <div className="mw-wrapper">
             <p className="txt--b">
               Detailing zewnętrzny to kompleksowy proces pielęgnacji nadwozia, który ma na celu przywrócenie mu pierwotnego blasku i zapewnienie mu maksymalnej ochrony przed szkodliwym wpływem czynników atmosferycznych.
             </p>
 
-            <div className='detailing-flex'>
+            <div className="detailing-flex">
               <div className="detailing-left">
 
                 <p className="p--md m-mtb txt--g txt--g-1">
                   <strong>Krok po kroku do lśniącego auta!</strong>
                 </p>
 
-                <ol className='ul-flex ol-ml'>
+                <ol className="ul-flex ol-ml">
                   <li>
                     <p className="txt--b">
                       <strong>Mycie</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Wstępne</strong> - dokładne pokrycie całego nadwozia pianą aktywną, aby usunąć wszelkie zabrudzenia, nawet z trudno dostępnych miejsc (koła, nadkola, wnęki drzwi, bagażnika, wlew paliwa, uszczelki).
                       </li>
@@ -59,7 +59,7 @@ function ExternalDetailing() {
                       <strong>Dogłębne oczyszczanie</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Deironizacja i dekontaminacja</strong> - zastosowanie specjalistycznych środków chemicznych usuwa z lakieru uporczywe zanieczyszczenia drogowe (rdza, owady, asfalt, smoła, żywica).
                       </li>
@@ -81,7 +81,7 @@ function ExternalDetailing() {
                       <strong> Zabezpieczenie lakieru</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Odtłuszczanie</strong> - dokładne usunięcie pozostałości past polerskich, przygotowując lakier do aplikacji powłoki ochronnej.
                       </li>
@@ -96,7 +96,7 @@ function ExternalDetailing() {
                       <strong>Wykończenie</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Dressing elementów nie lakierowanych</strong> - pielęgnacja i odświeżenie plastikowych elementów nadwozia, kokpitu i elementów gumowych, nadając im naturalny wygląd.
                       </li>
@@ -111,7 +111,7 @@ function ExternalDetailing() {
                       <strong>Dodatkowe opcje</strong>
                     </p>
 
-                    <ul className='ul-flex ul-mt'>
+                    <ul className="ul-flex ul-mt">
                       <li className="txt--b li-marker">
                         <strong>Powłoka ceramiczna</strong> - zapewnia długotrwałą ochronę lakieru przed zarysowaniami, brudem i promieniami UV.
                       </li>
@@ -131,46 +131,46 @@ function ExternalDetailing() {
                   <strong>Cennik</strong>
                 </h2>
 
-                <div className='price'>
-                  <div className='price-wrapper'>
+                <div className="price">
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--1'
+                      className="price-img price-img--1"
                       src={galleryImage1}
                       alt="Detailing aut małych"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut małych <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
 
-                  <div className='price-wrapper'>
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--2'
+                      className="price-img price-img--2"
                       src={galleryImage2}
                       alt="Detailing aut średniej wielkości"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut średnich <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
 
-                  <div className='price-wrapper'>
+                  <div className="price-wrapper">
                     <img
                       loading="lazy"
-                      className='price-img price-img--3'
+                      className="price-img price-img--3"
                       src={galleryImage3}
                       alt="Detailing aut dużych"
                     />
 
-                    <div className='price-txt'>
+                    <div className="price-txt">
                       <p className="p--md txt--b">Detailing aut dużych <br /></p>
-                      <p className='p--lg'><strong className='txt--g txt--g-2'>od XXXzł</strong></p>
+                      <p className="p--lg"><strong className="txt--g txt--g-2">od XXXzł</strong></p>
                     </div>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ function ExternalDetailing() {
             </strong>
           </h2>
 
-          <ul className='ul-flex ul-mt'>
+          <ul className="ul-flex ul-mt">
             <li className="txt--w li-marker">
               <strong>Błyszczący i perfekcyjnie czysty lakier</strong>
             </li>
@@ -214,4 +214,4 @@ function ExternalDetailing() {
   )
 }
 
-export default ExternalDetailing
+export default ExternalDetailing;

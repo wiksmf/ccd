@@ -1,10 +1,10 @@
-import './PhotoItem.css'
+import "./PhotoItem.css";
 
 function PhotoItem({ src, alt }) {
   return (
     <li className="photo">
-      <div className='photo-out'>
-        <div className='photo-in'>
+      <div className="photo-out">
+        <div className="photo-in">
           <img
             loading="lazy"
             className="photo-img"
@@ -17,6 +17,4 @@ function PhotoItem({ src, alt }) {
   )
 }
 
-
-
-export default PhotoItem
+export default PhotoItem;

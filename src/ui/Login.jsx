@@ -1,21 +1,71 @@
-import './Login.css'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
-function Login() {
+import "./Form.css";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { signIn } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      await signIn(email, password);
+      navigate("/form");
+    } catch (err) {
+      setError(err.message);
+      console.log(err.message);
+    }
+  };
+
   return (
-    <form id="login" className="form">
-      <label className="label">
-        <span className="span">Email</span>
-        <input type="email" className="input" required />
-      </label>
+    <main id="form" className="login">
+      <section className="section">
+        <div className="mw-wrapper">
+          <form id="form-login" className="form" onSubmit={handleSubmit}>
+            <p className="p">Login</p>
 
-      <label className="label">
-        <span className="span">Password</span>
-        <input type="password" className="input" required />
-      </label>
+            <label htmlFor="email-address" className="label">
+              <span>Email</span>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                className="input"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
 
-      <button type="button" className="btn">Login</button>
-    </form>
-  )
-}
+            <label htmlFor="password" className="label">
+              <span>Hasło</span>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                className="input"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
 
-export default Login
+            <button
+              type="submit"
+              className="btn-form"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default Login;

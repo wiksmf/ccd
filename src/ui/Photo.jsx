@@ -1,6 +1,6 @@
 import PhotoItem from './PhotoItem';
 
-import './Photo.css'
+import './Photo.css';
 
 function Photo({ images }) {
 
@@ -13,4 +13,4 @@ function Photo({ images }) {
   )
 }
 
-export default Photo
+export default Photo;
