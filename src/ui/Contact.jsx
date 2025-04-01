@@ -1,41 +1,57 @@
-import { HiOutlineMapPin, HiOutlinePhone } from "react-icons/hi2";
+import { HiOutlineMapPin } from 'react-icons/hi2';
+import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi';
 
-import AnchorLink from "./AnchorLink";
-import Map from "./Map";
+import AnchorLink from './AnchorLink';
+import Map from './Map';
 
-import "./Contact.css"
+import './Contact.css';
 
 function Contact() {
   return (
-    <section id="contact">
-      <div className="mw-wrapper">
-        <div className="section m-mb">
-          <h2 className="txt--g txt--g-1">
+    <section id='contact'>
+      <div className='mw-wrapper'>
+        <div className='section m-mb'>
+          <h2 className='txt--g txt--g-1'>
             <strong>Masz pytania? Zadzwoń!</strong>
           </h2>
         </div>
 
-        <div className="contact-wrapper">
-          <ul className="contact-list m-mb">
-            <li className="contact-li">
-              <span className="contact-icon contact-icon--pin">
+        <div className='contact-wrapper'>
+          <ul className='contact-list m-mb'>
+            <li className='contact-li'>
+              <span className='contact-icon contact-icon--pin'>
                 <HiOutlineMapPin />
               </span>
 
-              <p className="p p--sm txt--b">
+              <p className='p p--sm txt--b'>
                 <strong>Carbon Care Detailing</strong>
-                <span className="d-block">Ulica Jakas Tam 4</span>
-                <span className="d-block">00-000 Gdzies Tam</span>
+                <span className='d-block'>Olkusz, ul. Jasna 80</span>
               </p>
             </li>
 
-            <li className="contact-li">
-              <span className="contact-icon contact-icon--phone">
+            <li className='contact-li'>
+              <span className='contact-icon contact-icon--phone'>
                 <HiOutlinePhone />
               </span>
 
-              <AnchorLink href={"tel:+48XXXXXXXXX"} className={"p txt--b"}>
-                <strong>+48 XXX XXX XXX</strong>
+              <AnchorLink
+                href={'tel:+48666699955'}
+                className={'p txt--b'}
+              >
+                <strong>+48 666 699 955</strong>
+              </AnchorLink>
+            </li>
+
+            <li className='contact-li'>
+              <span className='contact-icon contact-icon--phone'>
+                <HiOutlineMail />
+              </span>
+
+              <AnchorLink
+                href={'mailto:kontakt@carbon-care-detailing.pl'}
+                className={'p txt--b'}
+              >
+                <strong>kontakt@carboncare.pl</strong>
               </AnchorLink>
             </li>
           </ul>
@@ -44,7 +60,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Contact;

@@ -1,38 +1,43 @@
-import { Link } from "react-router-dom";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import ReactCompareImage from "react-compare-image";
-import { useFirestore } from "../hooks/useFirestore";
+import { Link } from 'react-router-dom';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import ReactCompareImage from 'react-compare-image';
+import { useFirestore } from '../hooks/useFirestore';
 
-import AnchorLink from "../ui/AnchorLink";
-import Photo from "../ui/Photo";
+import AnchorLink from '../ui/AnchorLink';
+import Photo from '../ui/Photo';
 
-import bg1 from "../../public/images/home/bg-1.webp";
-import bg2 from "../../public/images/bg/bg-desktop.svg";
-import img1 from "../../public/images/home/rim-before.webp";
-import img2 from "../../public/images/home/rim-after.webp";
+import bg1 from '../../public/images/home/bg-1.webp';
+import bg2 from '../../public/images/bg/bg-desktop.svg';
+import img1 from '../../public/images/home/rim-before.webp';
+import img2 from '../../public/images/home/rim-after.webp';
 
-import "./Homepage.css";
+import './Homepage.css';
 
 function Homepage() {
-  const { items: galleryImages } = useFirestore("photos", 7);
+  const { items: galleryImages } = useFirestore('photos', 7);
 
   return (
-    <main id="home">
-      <section className="parallax-hero">
+    <main id='home'>
+      <section className='parallax-hero'>
         <ParallaxBanner>
-          <ParallaxBannerLayer image={bg1} style={{ backgroundAttachment: "fixed" }} speed={-50} />
-          <div className="section hero hero--lg">
-            <div className="mw-wrapper">
-              <div className="hero-wrapper">
-                <h1 className="h-h1 txt--g txt--g-1 drop drop-in">
+          <ParallaxBannerLayer
+            image={bg1}
+            style={{ backgroundAttachment: 'fixed' }}
+            speed={-50}
+          />
+          <div className='section hero hero--lg'>
+            <div className='mw-wrapper'>
+              <div className='hero-wrapper'>
+                <h1 className='h-h1 txt--g txt--g-1 drop drop-in'>
                   <strong>Detailing z pasją</strong>
                 </h1>
 
-                <p className="p p--lg txt--w m-mtb drop drop-in-2">
-                  Kompleksowa pielęgnacja samochodów
-                </p>
+                <p className='p p--lg txt--w m-mtb drop drop-in-2'>Kompleksowa pielęgnacja samochodów</p>
 
-                <AnchorLink href={"#offer"} className={"btn-cta drop drop-in-3"}>
+                <AnchorLink
+                  href={'#offer'}
+                  className={'btn-cta drop drop-in-3'}
+                >
                   <strong>Sprawdź ofertę</strong>
                 </AnchorLink>
               </div>
@@ -41,86 +46,130 @@ function Homepage() {
         </ParallaxBanner>
       </section>
 
-      <section className="section" id="offer">
-        <div className="mw-wrapper">
-          <h2 className="h-h2 d-grid txt--b m-mb">
-            <span className="d-grid--line"></span>
-            <strong className="d-grid--txt">Oferta</strong>
-            <span className="d-grid--line"></span>
-          </h2>
+      <ParallaxBanner>
+        <ParallaxBannerLayer
+          image={bg2}
+          style={{ backgroundAttachment: 'fixed' }}
+          speed={-50}
+        />
+        <section
+          className='section'
+          id='offer'
+        >
+          <div className='mw-wrapper'>
+            <h2 className='h-h2 d-grid txt--b m-mb'>
+              <span className='d-grid--line'></span>
+              <strong className='d-grid--txt'>Oferta</strong>
+              <span className='d-grid--line'></span>
+            </h2>
 
-          <div className="offer-wrapper">
-            <div className="offer offer--1">
-              <div className="offer-cp">
-                <h3 className="h-h3 txt--w m-mb">
-                  <strong>Detailing zewnętrzny</strong>
-                </h3>
+            <div className='offer-wrapper'>
+              <div className='offer offer--1'>
+                <div className='offer-cp'>
+                  <h3 className='h-h3 txt--w m-mb'>
+                    <strong>PAKIETY DETAILINGOWE</strong>
+                  </h3>
 
-                <Link
-                  to="/detailing-zewnetrzny"
-                  className="offer-link btn-cta"
-                >
-                  <strong>Dowiedz się więcej</strong>
-                </Link>
+                  <Link
+                    to='/detailing-pakiety'
+                    className='offer-link btn-cta'
+                  >
+                    <strong>Dowiedz się więcej</strong>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="offer offer--2">
-              <div className="offer-cp">
-                <h3 className="h-h3 txt--w m-mb">
-                  <strong>Detailing wewnętrzny</strong>
-                </h3>
+              <div className='offer offer--2'>
+                <div className='offer-cp'>
+                  <h3 className='h-h3 txt--w m-mb'>
+                    <strong>FOLIE</strong>
+                  </h3>
 
-                <Link
-                  to="/detailing-wewnetrzny"
-                  className="offer-link btn-cta"
-                >
-                  <strong>Dowiedz się więcej</strong>
-                </Link>
+                  <Link
+                    to='/folie'
+                    className='offer-link btn-cta'
+                  >
+                    <strong>Dowiedz się więcej</strong>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="offer offer--3">
-              <div className="offer-cp">
-                <h3 className="h-h3 txt--w m-mb">
-                  <strong>Usługi dodatkowe</strong>
-                </h3>
+              <div className='offer offer--3'>
+                <div className='offer-cp'>
+                  <h3 className='h-h3 txt--w m-mb'>
+                    <strong>DODATKOWE USŁUGI</strong>
+                  </h3>
 
-                <Link
-                  to="/uslugi-dodatkowe"
-                  className="offer-link btn-cta"
-                >
-                  <strong>Dowiedz się więcej</strong>
-                </Link>
+                  <Link
+                    to='/dodatkowe-uslugi'
+                    className='offer-link btn-cta'
+                  >
+                    <strong>Dowiedz się więcej</strong>
+                  </Link>
+                </div>
+              </div>
+              <div className='offer offer--4'>
+                <div className='offer-cp'>
+                  <h3 className='h-h3 txt--w m-mb'>
+                    <strong>CARBONY</strong>
+                  </h3>
+
+                  <Link
+                    to='/carbon'
+                    className='offer-link btn-cta'
+                  >
+                    <strong>Dowiedz się więcej</strong>
+                  </Link>
+                </div>
+              </div>
+              <div className='offer offer--5'>
+                <div className='offer-cp'>
+                  <h3 className='h-h3 txt--w m-mb'>
+                    <strong>PROMOCJE</strong>
+                  </h3>
+
+                  <Link
+                    to='/promocje'
+                    className='offer-link btn-cta'
+                  >
+                    <strong>Dowiedz się więcej</strong>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ParallaxBanner>
 
-      <section className="section about">
-        <div className="mw-wrapper">
-          <h2 className="h-h2 d-grid txt--w">
-            <span className="d-grid--line"></span>
-            <strong className="d-grid--txt">Dlaczego ja?</strong>
-            <span className="d-grid--line"></span>
+      <section className='section about'>
+        <div className='mw-wrapper'>
+          <h2 className='h-h2 d-grid txt--w'>
+            <span className='d-grid--line'></span>
+            <strong className='d-grid--txt'>Dlaczego ja?</strong>
+            <span className='d-grid--line'></span>
           </h2>
 
-          <div className="about-wrapper m-mt">
-            <div className="about-txt">
-              <p className="p--md m-mb txt--g txt--g-2"><strong>Gwarancja najwyższej jakości!</strong>
+          <div className='about-wrapper m-mt'>
+            <div className='about-txt'>
+              <p className='p--md m-mb txt--g txt--g-2'>
+                <strong>Gwarancja najwyższej jakości!</strong>
               </p>
 
-              <p className="p p-lr txt--w">
-                Detailingiem aut zajmuję się nie tylko z racji zawodu, ale przede wszystkim z pasji do detali i dążenia do perfekcji. Moim celem jest wydobycie z każdego samochodu jego pełnego potencjału i przywrócenie mu blasku niczym prosto z salonu.
+              <p className='p p-lr txt--w'>
+                Detailingiem aut zajmuję się nie tylko z racji zawodu, ale przede wszystkim z pasji do detali i dążenia
+                do perfekcji. Moim celem jest wydobycie z każdego samochodu jego pełnego potencjału i przywrócenie mu
+                blasku niczym prosto z salonu.
               </p>
             </div>
 
-            <div className="about-img m-mtb">
-              <ReactCompareImage leftImage={img1} rightImage={img2} />
+            <div className='about-img m-mtb'>
+              <ReactCompareImage
+                leftImage={img1}
+                rightImage={img2}
+              />
             </div>
 
             <Link
-              to="/o-mnie"
-              className="btn-cta btn-cta--g"
+              to='/o-mnie'
+              className='btn-cta btn-cta--g'
             >
               <strong>Poznajmy się</strong>
             </Link>
@@ -129,20 +178,24 @@ function Homepage() {
       </section>
 
       <ParallaxBanner>
-        <ParallaxBannerLayer image={bg2} style={{ backgroundAttachment: "fixed" }} speed={-50} />
-        <section className="section gallery">
-          <div className="mw-wrapper">
-            <h2 className="h-h2 d-grid txt--b">
-              <span className="d-grid--line"></span>
-              <strong className="d-grid--txt">Galeria</strong>
-              <span className="d-grid--line"></span>
+        <ParallaxBannerLayer
+          image={bg2}
+          style={{ backgroundAttachment: 'fixed' }}
+          speed={-50}
+        />
+        <section className='section gallery'>
+          <div className='mw-wrapper'>
+            <h2 className='h-h2 d-grid txt--b'>
+              <span className='d-grid--line'></span>
+              <strong className='d-grid--txt'>Realizacje</strong>
+              <span className='d-grid--line'></span>
             </h2>
 
             <Photo images={galleryImages} />
 
             <Link
-              to="/galeria"
-              className="btn-cta"
+              to='/realizacje'
+              className='btn-cta'
             >
               <strong>Obejrzyj realizacje</strong>
             </Link>
@@ -150,7 +203,7 @@ function Homepage() {
         </section>
       </ParallaxBanner>
     </main>
-  )
+  );
 }
 
 export default Homepage;

@@ -12,45 +12,34 @@
   height: 99vh;
 }
 
-#home .hero-wrapper {
-  position: absolute;
-  top: calc(50% + 9.2rem);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--color-light-1);
-  width: 90%;
-  z-index: 1;
+#home .offer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem 8rem;
 }
 
 #home .offer {
   position: relative;
-  width: 100%;
-  height: 35rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 130%;
-  text-align: center;
-  transition: background-size 0.15s linear;
-}
-
-#home .offer--2 {
-  height: 40rem;
-}
-
-#home .offer:hover {
-  background-size: 150%;
-}
-
-#home .offer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--color-dark-3);
-  opacity: 0.7;
+  padding: 2rem 2.5rem;
+  min-width: 32rem;
+  width: 25%;
+  height: 23rem;
+  border-radius: var(--border-radius);
   z-index: 1;
+}
+
+#home .offer::before {
+  content: '';
+  top: 10px;
+  left: -10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(45deg, var(--color-gold-1), var(--color-gold-4), var(--color-gold-5), var(--color-gold-4), var(--color-gold-3), var(--color-gold-2));
+  z-index: -1;
 }
 
 #home .offer-cp {
@@ -61,48 +50,69 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 0.15s linear;
   z-index: 2;
 }
 
-#home .offer--1 {
-  clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%);
+#home .offer.offer--1 .offer-cp {
   background-image: url(/public/images/home/auto-detailing-zewnetrzny.webp);
 }
 
-#home .offer--1 .offer-cp {
-  top: 45%;
+#home .offer.offer--2 .offer-cp {
+  background-image: url(/public/images/home/folia-ppf.webp);
 }
 
-#home .offer--2 {
-  margin-top: -8.5rem;
-  clip-path: polygon(0 23%, 100% 0, 100% 77%, 0% 100%);
-  background-image: url(/public/images/home/auto-detailing-wewnetrzny.webp);
-}
-
-.offer--2 .offer-cp {
-  top: 55%;
-}
-
-#home .offer--3 {
-  margin-top: -11.5rem;
-  clip-path: polygon(0 35%, 100% 9%, 100% 100%, 0% 100%);
+#home .offer.offer--3 .offer-cp {
   background-image: url(/public/images/home/auto-detailing-dodatkowe.webp);
 }
 
-#home .offer--3 .offer-cp {
-  top: 65%;
+#home .offer.offer--4 .offer-cp {
+  background-image: url(/public/images/home/carbon.webp);
+}
+
+#home .offer.offer--5 .offer-cp {
+  background-image: url(../../public/images/detailing/bg-3.webp);
+
+}
+
+#home .offer-cp:hover {
+  background-size: 150%;
+}
+
+#home .offer-cp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dark-3);
+  border-radius: var(--border-radius);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+#home .offer .h-h3,
+#home .offer-link {
+  position: relative;
+  z-index: 3;
 }
 
 #home .about {
   position: relative;
-  background-image: 
-    url(/public/images/home/bg-2.webp), 
-    radial-gradient(circle at 60% bottom, 
-      var(--color-dark-1), 
-      var(--color-dark-2), 
-      var(--color-dark-3)
-    );
+  background-image:
+    url(/public/images/home/bg-2.webp),
+    radial-gradient(circle at 60% bottom,
+      var(--color-dark-1),
+      var(--color-dark-2),
+      var(--color-dark-3));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -115,11 +125,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at 60% bottom, 
-    var(--color-dark-1), 
-    var(--color-dark-2), 
-    var(--color-dark-3)
-  );
+  background-image: radial-gradient(circle at 60% bottom,
+      var(--color-dark-1),
+      var(--color-dark-2),
+      var(--color-dark-3));
   opacity: 0.9;
 }
 
@@ -159,13 +168,13 @@
   height: calc(100% + 20px);
   width: 100%;
   border-radius: var(--border-radius);
-  background-image: linear-gradient(45deg, 
-    var(--color-gold-1), 
-    var(--color-gold-4), 
-    var(--color-gold-5), 
-    var(--color-gold-4), 
-    var(--color-gold-3), 
-    var(--color-gold-2));
+  background-image: linear-gradient(45deg,
+      var(--color-gold-1),
+      var(--color-gold-4),
+      var(--color-gold-5),
+      var(--color-gold-4),
+      var(--color-gold-3),
+      var(--color-gold-2));
 }
 
 #home .gallery {
@@ -188,10 +197,10 @@
     padding-left: 0;
     padding-right: 0;
   }
-  
+
   #home .about-wrapper {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       'l r'
       'l r';
     grid-template-columns: repeat(2, 50%);
@@ -225,13 +234,13 @@
     position: absolute;
     height: calc(100% + 50px);
     width: 100%;
-    background-image: linear-gradient(45deg, 
-      var(--color-gold-5), 
-      var(--color-gold-3), 
-      var(--color-gold-4), 
-      var(--color-gold-2), 
-      var(--color-gold-4), 
-      var(--color-gold-3));
+    background-image: linear-gradient(45deg,
+        var(--color-gold-5),
+        var(--color-gold-3),
+        var(--color-gold-4),
+        var(--color-gold-2),
+        var(--color-gold-4),
+        var(--color-gold-3));
   }
 
   #home .about .btn-cta {
@@ -247,46 +256,10 @@
   }
 
   #home .offer-wrapper {
-    position: relative;
-    height: 500px;
-  }
-
-  #home .offer {
-    position: absolute;
-    top: 0;
-    height: 500px;
-  }
-
-  #home .offer--1 {
-    left: 0;
-    clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
-    min-width: 35.2rem;
-    width: 32.5vw;
-    max-width: 50.2rem;
-  }
-
-  #home .offer--2 {
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
-    margin: 0;
-    min-width: 40rem;
-    width: 36.5vw;
-    max-width: 55.9rem;
-  }
-
-  #home .offer--3 {
-    right: 0;
-    clip-path: polygon(13.5% 0, 100% 0, 100% 100%, 0% 100%);
-    margin: 0;
-    min-width: 35.2rem;
-    width: 32.5vw;
-    max-width: 50.2rem;
-  }
-
-  #home .offer--1 .offer-cp,
-  #home .offer--2 .offer-cp,
-  #home .offer--3 .offer-cp {
-    top: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
   }
 }

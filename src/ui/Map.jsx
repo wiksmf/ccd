@@ -1,12 +1,12 @@
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import { Icon } from "leaflet";
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { Icon } from 'leaflet';
 
-import mapPin from "../../public/images/icons/pin.svg";
+import mapPin from '../../public/images/icons/pin.svg';
 
-import "./Map.css";
+import './Map.css';
 
 function Map() {
-  const position = [50.2813, 19.5657];
+  const position = [50.284905, 19.579508];
 
   const legalIcon = new Icon({
     iconUrl: mapPin,
@@ -14,16 +14,24 @@ function Map() {
   });
 
   return (
-    <div className="map-wrapper">
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="map">
+    <div className='map-wrapper'>
+      <MapContainer
+        center={position}
+        zoom={13}
+        scrollWheelZoom={false}
+        className='map'
+      >
         <TileLayer
           attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        <Marker position={position} icon={legalIcon} />
+        <Marker
+          position={position}
+          icon={legalIcon}
+        />
       </MapContainer>
     </div>
-  )
+  );
 }
 
 export default Map;
