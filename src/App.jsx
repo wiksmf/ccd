@@ -16,8 +16,6 @@ import Blog from './pages/Blog';
 import AppLayout from './ui/AppLayout';
 import Post from './ui/Post';
 import ScrollToTop from './ui/ScrollToTop';
-import Post from './ui/Post';
-import ScrollToTop from './ui/ScrollToTop';
 
 function App() {
   return (
