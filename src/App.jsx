@@ -14,11 +14,8 @@ import DetailingPromotions from './pages/DetailingPromotions';
 import Blog from './pages/Blog';
 
 import AppLayout from './ui/AppLayout';
-import Login from './ui/Login';
-import Form from './ui/Form';
 import Post from './ui/Post';
 import ScrollToTop from './ui/ScrollToTop';
-import PrivateRoute from './ui/PrivateRoute';
 
 function App() {
   return (
@@ -71,19 +68,6 @@ function App() {
             <Route
               path='*'
               element={<PageNotFound />}
-            />
-
-            <Route
-              path='/login'
-              element={<Login />}
-            />
-            <Route
-              path='/form'
-              element={
-                <PrivateRoute>
-                  <Form />
-                </PrivateRoute>
-              }
             />
           </Route>
         </Routes>
